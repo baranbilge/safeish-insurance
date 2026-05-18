@@ -1,0 +1,310 @@
+@model IEnumerable<Safeish.Models.InsurancePackage>
+@{
+    ViewData["Title"] = "Ana Sayfa";
+    var groupedPackages = Model.Where(p => p.InsuranceTypeId == 1 || p.InsuranceTypeId == 2)
+                               .GroupBy(p => p.InsuranceType)
+                               .OrderBy(g => g.Key.Id)
+                               .ToList();
+}
+
+<!-- Carousel Section -->
+<div id="homeCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="5000">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner rounded-4 shadow-sm overflow-hidden" style="height: 60vh; min-height: 400px;">
+        <!-- Slayt 1 -->
+        <div class="carousel-item active h-100">
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 h-100" style="object-fit: cover; filter: brightness(0.5);" alt="İlk Arabam İlk Sigortam">
+            <div class="carousel-caption d-flex flex-column justify-content-center h-100 bottom-0 text-start px-md-5">
+                <span class="badge bg-danger rounded-pill px-3 py-2 mb-3" style="width: fit-content; font-size: 1rem;">%20 İndirim Fırsatı!</span>
+                <h2 class="display-4 fw-bold">İlk Arabanız, İlk Kaskonuz!</h2>
+                <p class="lead fs-4">İlk defa araç sahibi olan müşterilerimize özel, ilk kasko poliçelerinde anında %20 indirim fırsatını kaçırmayın.</p>
+                <div class="mt-3">
+                    <a href="#sigortalar" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow">Hemen Teklif Al</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slayt 2 -->
+        <div class="carousel-item h-100">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 h-100" style="object-fit: cover; filter: brightness(0.5);" alt="Kurumsal Reklam">
+            <div class="carousel-caption d-flex flex-column justify-content-center h-100 bottom-0 text-center px-md-5">
+                <h2 class="display-3 fw-bold">Güveniniz, Ortak Geleceğimiz</h2>
+                <p class="lead fs-4">Safeish olarak, güçlü altyapımız ve uzman kadromuzla yıllardır yanınızdayız. En zor anlarınızda değil, her zaman buradayız.</p>
+                <div class="mt-3">
+                    <a href="#iletisim" class="btn btn-outline-light btn-lg rounded-pill px-5 fw-bold border-2">Bizi Yakından Tanıyın</a>
+                </div>
+            </div>
+        </div>
+        <!-- Slayt 3 -->
+        <div class="carousel-item h-100">
+            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 h-100" style="object-fit: cover; filter: brightness(0.5);" alt="Sağlık Sigortası">
+            <div class="carousel-caption d-flex flex-column justify-content-center h-100 bottom-0 text-end px-md-5">
+                <div class="ms-auto">
+                    <h2 class="display-4 fw-bold">Sağlığınız Her Şeyden Önemli</h2>
+                    <p class="lead fs-4">Sizi ve ailenizi beklenmedik sağlık sorunlarına karşı Türkiye'nin en iyi hastanelerinde güvence altına alıyoruz.</p>
+                    <div class="mt-3">
+                        <a href="#sigortalar" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold shadow">Sağlık Sigortalarını İncele</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Önceki</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Sonraki</span>
+    </button>
+</div>
+
+<!-- Neden Safeish Section -->
+<section id="neden-safeish" class="py-5 mb-5 bg-white rounded-4 shadow-sm px-4 border">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary mb-3">Neden Safeish?</h2>
+        <p class="text-muted">Bizi tercih etmeniz için yüzlerce neden var, işte en önemlileri:</p>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Madde 1 -->
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="p-4 h-100 border rounded-4 bg-light transition-hover">
+                <i class="bi bi-headset text-primary mb-3 d-block" style="font-size: 2.5rem;"></i>
+                <h5 class="fw-bold">7/24 Kesintisiz Destek</h5>
+                <p class="text-muted small mb-0">Ne zaman ihtiyacınız olursa, uzman ekibimiz günün her saati bir telefon uzağınızda.</p>
+            </div>
+        </div>
+        <!-- Madde 2 -->
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="p-4 h-100 border rounded-4 bg-light transition-hover">
+                <i class="bi bi-cash-stack text-success mb-3 d-block" style="font-size: 2.5rem;"></i>
+                <h5 class="fw-bold">Hızlı Hasar Ödemesi</h5>
+                <p class="text-muted small mb-0">Bürokrasiyle uğraşmadan, onaylanan hasar talepleriniz anında hesabınıza geçer.</p>
+            </div>
+        </div>
+        <!-- Madde 3 -->
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="p-4 h-100 border rounded-4 bg-light transition-hover">
+                <i class="bi bi-person-lines-fill text-info mb-3 d-block" style="font-size: 2.5rem;"></i>
+                <h5 class="fw-bold">Kişiselleştirilmiş Poliçeler</h5>
+                <p class="text-muted small mb-0">Sizin yaşam tarzınıza ve ihtiyaçlarınıza göre özel olarak tasarlanmış esnek teminatlar.</p>
+            </div>
+        </div>
+        <!-- Madde 4 -->
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="p-4 h-100 border rounded-4 bg-light transition-hover">
+                <i class="bi bi-hospital text-danger mb-3 d-block" style="font-size: 2.5rem;"></i>
+                <h5 class="fw-bold">Geniş Kurum Ağı</h5>
+                <p class="text-muted small mb-0">Türkiye genelinde binlerce özel hastane, servis ve kurumla ayrıcalıklı anlaşmalar.</p>
+            </div>
+        </div>
+        <!-- Madde 5 -->
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="p-4 h-100 border rounded-4 bg-light transition-hover">
+                <i class="bi bi-chat-dots-fill text-warning mb-3 d-block" style="font-size: 2.5rem;"></i>
+                <h5 class="fw-bold">Ücretsiz Danışmanlık</h5>
+                <p class="text-muted small mb-0">Hangi sigortanın size uygun olduğunu bulmak için ücretsiz profesyonel finansal danışmanlık.</p>
+            </div>
+        </div>
+        <!-- Madde 6 -->
+        <div class="col-md-6 col-lg-4 text-center">
+            <div class="p-4 h-100 border rounded-4 bg-light transition-hover">
+                <i class="bi bi-tags-fill text-primary mb-3 d-block" style="font-size: 2.5rem;"></i>
+                <h5 class="fw-bold">Şeffaf Fiyatlandırma</h5>
+                <p class="text-muted small mb-0">Gizli ücretler yok, sürpriz yok. Her şey net ve bütçenizi koruyacak şekilde planlanmıştır.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sigortalar Section (Slider) -->
+<section id="sigortalar" class="py-5 mb-5 bg-light rounded-4">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary mb-3">Sigortalarımız</h2>
+        <p class="text-muted">Size ve bütçenize en uygun sigorta paketlerini seçin.</p>
+    </div>
+
+    <div id="insurancePackagesCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="false">
+        <div class="carousel-inner px-md-5">
+            @for (int i = 0; i < groupedPackages.Count; i++)
+            {
+                var group = groupedPackages[i];
+                var type = group.Key;
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <h3 class="text-center text-dark mb-4 fw-bold">
+                        @(type.Id == 2 ? "Araç Sigortası" : "Sağlık Sigortası")
+                    </h3>
+                    <div class="row g-4 justify-content-center px-md-5 px-3">
+                        @foreach (var package in group)
+                        {
+                            <div class="col-md-6 col-lg-4">
+                                <div class="card h-100 shadow-sm border-0 insurance-card transition-hover rounded-4 overflow-hidden">
+                                    <div class="card-header bg-white border-0 pt-4 pb-0 text-center">
+                                        <div class="icon-circle bg-light text-primary mx-auto mb-3 d-flex align-items-center justify-content-center" style="width: 70px; height: 70px; border-radius: 50%;">
+                                            <i class="bi @type.IconUrl fs-2"></i>
+                                        </div>
+                                        <h5 class="card-title fw-bold text-dark">@package.Name</h5>
+                                    </div>
+                                    <div class="card-body text-center">
+                                        <h3 class="card-price fw-bold text-primary mb-0">₺@package.Price.ToString("N0")<span class="fs-6 text-muted fw-normal">/yıl</span></h3>
+                                        <p class="text-muted small mt-2">Teminat: ₺@package.CoverageAmount.ToString("N0")</p>
+                                        <hr class="my-4 text-muted opacity-25">
+                                        <ul class="list-unstyled text-start small mb-0 px-2">
+                                            @foreach (var feature in package.Features.Split(','))
+                                            {
+                                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>@feature.Trim()</li>
+                                            }
+                                        </ul>
+                                    </div>
+                                    <div class="card-footer bg-white border-0 pb-4 text-center">
+                                        <a href="#" class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold w-100">Satın Al</a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#insurancePackagesCarousel" data-bs-slide="prev" style="width: 5%; filter: invert(100%);">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#insurancePackagesCarousel" data-bs-slide="next" style="width: 5%; filter: invert(100%);">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </div>
+</section>
+
+<!-- Anlaşmalı Kurumlar Section -->
+<section id="anlasmali-kurumlar" class="py-5 mb-5 bg-light rounded-4 px-4">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary mb-3">Anlaşmalı Kurumlar</h2>
+        <p class="text-muted">Güçlü iş ortaklarımızla her zaman yanınızdayız.</p>
+    </div>
+    
+    <div class="row g-4 text-center">
+        <!-- Kurum 1 -->
+        <div class="col-md-4">
+            <div class="bg-white p-4 rounded-4 shadow-sm h-100 transition-hover">
+                <div class="d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" style="width: 64px; height: 64px; background: linear-gradient(135deg, #0d6efd, #0dcaf0); color: white; border-radius: 12px; font-weight: 900; font-size: 1.4rem; letter-spacing: 1px;">MTH</div>
+                <h4 class="fw-bold">MediTrust</h4>
+                <p class="text-muted small">Türkiye genelinde yaygın hastane ağı ile kaliteli ve hızlı sağlık hizmeti sunan öncü kuruluş.</p>
+            </div>
+        </div>
+        <!-- Kurum 2 -->
+        <div class="col-md-4">
+            <div class="bg-white p-4 rounded-4 shadow-sm h-100 transition-hover">
+                <i class="bi bi-car-front-fill text-danger mb-3 d-block" style="font-size: 3rem;"></i>
+                <h4 class="fw-bold">AutoGuard</h4>
+                <p class="text-muted small">7/24 yol yardım ve anlaşmalı servis ağıyla aracınızın güvenliği için her an destekçiniz.</p>
+            </div>
+        </div>
+        <!-- Kurum 3 -->
+        <div class="col-md-4">
+            <div class="bg-white p-4 rounded-4 shadow-sm h-100 transition-hover">
+                <div class="d-flex align-items-center justify-content-center mx-auto mb-3 shadow-sm" style="width: 64px; height: 64px; background-color: #e0f2fe; color: #0d6efd; border: 3px solid #0d6efd; border-radius: 50%; font-weight: 900; font-size: 2.2rem;">H</div>
+                <h4 class="fw-bold">HomeSafe</h4>
+                <p class="text-muted small">Evinizi ve eşyalarınızı doğal afetlere ve kazalara karşı kapsamlı poliçelerle koruma altına alır.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Finansal Danışmanlık Section -->
+<section id="finansal-danismanlik" class="py-5 mb-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="display-5 fw-bold text-primary mb-4">Finansal Danışmanlık</h2>
+            <p class="lead mb-4 text-muted">Geleceğinizi şansa bırakmayın. Uzman finansal danışmanlarımızla yatırımlarınızı güvence altına alın ve büyütün.</p>
+            <ul class="list-unstyled mb-4">
+                <li class="mb-3"><i class="bi bi-check2-all text-primary me-2"></i> Bireysel Emeklilik Planlaması</li>
+                <li class="mb-3"><i class="bi bi-check2-all text-primary me-2"></i> Eğitim ve Gelecek Fonları</li>
+                <li class="mb-3"><i class="bi bi-check2-all text-primary me-2"></i> Risk ve Varlık Yönetimi</li>
+            </ul>
+            <a href="#iletisim" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">Hemen Bilgi Alın</a>
+        </div>
+        <div class="col-lg-6">
+            <div class="bg-primary text-white p-5 rounded-4 shadow text-center">
+                <i class="bi bi-graph-up-arrow d-block mb-3" style="font-size: 4rem;"></i>
+                <h3 class="fw-bold">Geleceğe Yatırım Yapın</h3>
+                <p class="mb-0">Doğru planlama ile yarınlarınız bugünden daha güvende.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- İletişim Section -->
+<section id="iletisim" class="py-5 bg-white border-top">
+    <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold text-primary mb-3">Bizimle İletişime Geçin</h2>
+        <p class="text-muted">Sorularınız veya size özel tekliflerimiz için her zaman buradayız.</p>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-5 mb-4">
+            <div class="d-flex align-items-start mb-4">
+                <i class="bi bi-geo-alt-fill text-primary fs-3 me-3"></i>
+                <div>
+                    <h5 class="fw-bold">Adres</h5>
+                    <p class="text-muted mb-0">Güvenlik Cd. No: 123, Şişli, İstanbul</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start mb-4">
+                <i class="bi bi-telephone-fill text-primary fs-3 me-3"></i>
+                <div>
+                    <h5 class="fw-bold">Telefon</h5>
+                    <p class="text-muted mb-0">+90 (212) 555 01 23</p>
+                </div>
+            </div>
+            <div class="d-flex align-items-start">
+                <i class="bi bi-envelope-fill text-primary fs-3 me-3"></i>
+                <div>
+                    <h5 class="fw-bold">E-posta</h5>
+                    <p class="text-muted mb-0">destek@safeish.com.tr</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <form class="bg-light p-4 rounded-4 shadow-sm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Adınız Soyadınız">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="E-posta Adresiniz">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Mesajınız"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary w-100 rounded-pill fw-bold">Mesaj Gönder</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+    .bg-gradient-dark {
+        background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2));
+    }
+    .transition-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .transition-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    
+    /* Smooth Scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Navbar Scroll Offset */
+    section {
+        scroll-margin-top: 80px;
+    }
+</style>

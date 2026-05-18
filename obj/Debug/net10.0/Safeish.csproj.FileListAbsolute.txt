@@ -1,0 +1,672 @@
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\appsettings.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.staticwebassets.runtime.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.staticwebassets.endpoints.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.exe
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.deps.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.runtimeconfig.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Safeish.pdb
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Humanizer.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.csproj.AssemblyReference.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.AssemblyInfoInputs.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.AssemblyInfo.cs
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.csproj.CoreCompileInputs.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.RazorAssemblyInfo.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.RazorAssemblyInfo.cs
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\scopedcss\bundle\Safeish.styles.css
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\scopedcss\projectbundle\Safeish.bundle.scp.css
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\bauqpl0qmy-{0}-b9sayid5wm-b9sayid5wm.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\61mzh7gtuc-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\i1hfr2iabr-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\vrjwvsxv94-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\czikwbajpv-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\gex9yfhecd-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\bszm5oaa9n-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\xjn9scaxcb-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\4k1ii38em6-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\f0p4iq7eje-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\pgvvoej3vq-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\bbukmyy7zl-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\iagady67zv-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\y1ew6bqwhp-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\lkk8jsusga-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\ejtmgf4h2y-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\rv5wc1lyy7-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\vfv44ksuu6-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\mb5u1vdin6-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\8rzpeni909-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\ud5hxk1s5j-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\pbenmbmryt-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\p725v2hcjy-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\5r2a2s9qoi-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\50hmxbf6vq-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\ypezknzxqx-{0}-06098lyss8-06098lyss8.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\3hyiijh9dm-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\nlkjv6kp0n-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\817o21rhvp-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\yvu4sspnbr-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\iob2boqjfk-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\8ft5zyze0h-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\omcqxf8zqo-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\ge65rm91a9-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\eun3iv0a7f-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\vyoa6wa1yf-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\4xcgzpqesz-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\4cwd4ocf4n-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\8o199e5awl-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\dw0h03zn2l-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\x7v3gkif2i-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\y7ll0cx9x4-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\pd1yq7zjsh-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\vs6r0soj78-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\d6kl7zcmqo-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\jd2s7nrned-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\0gbllb4e78-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\lcemezpydl-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\8kgt549cjl-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\pdt48fcrni-{0}-356vix0kms-356vix0kms.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\vj1phsfi0c-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\jk2g9ou45h-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\d85pjbml0v-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\7byl3xst2k-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\2d6jq2y0op-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\v89e0pwgxo-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\cof3rzt1ig-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\3gbgqhon7j-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\h4xbyndew8-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\tvyh5nb0sh-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\7tmvuxn3fw-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\8xoqffzg39-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\xlaj7m9swi-{0}-1ihv7rhl34-1ihv7rhl34.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\compressed\iqzmbsu7cf-{0}-1ihv7rhl34-1ihv7rhl34.gz
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.csproj.Up2Date
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\refint\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.pdb
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\Safeish.genruntimeconfig.cache
+C:\Users\newsg\OneDrive\Desktop\Safeish\obj\Debug\net10.0\ref\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\appsettings.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.staticwebassets.endpoints.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.staticwebassets.runtime.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.exe
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.deps.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.runtimeconfig.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Safeish.pdb
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Humanizer.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.csproj.AssemblyReference.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.AssemblyInfoInputs.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.AssemblyInfo.cs
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.csproj.CoreCompileInputs.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.RazorAssemblyInfo.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.RazorAssemblyInfo.cs
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\scopedcss\bundle\Safeish.styles.css
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\scopedcss\projectbundle\Safeish.bundle.scp.css
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\bauqpl0qmy-{0}-b9sayid5wm-b9sayid5wm.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\61mzh7gtuc-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\i1hfr2iabr-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\vrjwvsxv94-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\czikwbajpv-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\gex9yfhecd-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\bszm5oaa9n-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\xjn9scaxcb-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\4k1ii38em6-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\f0p4iq7eje-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\pgvvoej3vq-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\bbukmyy7zl-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\iagady67zv-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\y1ew6bqwhp-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\lkk8jsusga-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\ejtmgf4h2y-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\rv5wc1lyy7-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\vfv44ksuu6-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\mb5u1vdin6-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\8rzpeni909-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\ud5hxk1s5j-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\pbenmbmryt-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\p725v2hcjy-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\5r2a2s9qoi-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\50hmxbf6vq-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\ypezknzxqx-{0}-06098lyss8-06098lyss8.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\3hyiijh9dm-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\nlkjv6kp0n-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\817o21rhvp-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\yvu4sspnbr-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\iob2boqjfk-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\8ft5zyze0h-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\omcqxf8zqo-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\ge65rm91a9-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\eun3iv0a7f-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\vyoa6wa1yf-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\4xcgzpqesz-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\4cwd4ocf4n-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\8o199e5awl-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\dw0h03zn2l-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\x7v3gkif2i-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\y7ll0cx9x4-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\pd1yq7zjsh-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\vs6r0soj78-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\d6kl7zcmqo-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\jd2s7nrned-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\0gbllb4e78-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\lcemezpydl-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\8kgt549cjl-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\pdt48fcrni-{0}-356vix0kms-356vix0kms.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\vj1phsfi0c-{0}-83jwlth58m-83jwlth58m.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\jk2g9ou45h-{0}-mrlpezrjn3-mrlpezrjn3.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\d85pjbml0v-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\7byl3xst2k-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\2d6jq2y0op-{0}-x0q3zqp4vz-x0q3zqp4vz.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\v89e0pwgxo-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\cof3rzt1ig-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\3gbgqhon7j-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\h4xbyndew8-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\tvyh5nb0sh-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\7tmvuxn3fw-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\8xoqffzg39-{0}-mlv21k5csn-mlv21k5csn.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\xlaj7m9swi-{0}-1ihv7rhl34-1ihv7rhl34.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\compressed\iqzmbsu7cf-{0}-1ihv7rhl34-1ihv7rhl34.gz
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.csproj.Up2Date
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\refint\Safeish.dll
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.pdb
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\Safeish.genruntimeconfig.cache
+C:\Users\newsg\OneDrive\Desktop\proje aşama\Safeish 1\obj\Debug\net10.0\ref\Safeish.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\appsettings.Development.json
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\appsettings.json
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.staticwebassets.runtime.json
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.staticwebassets.endpoints.json
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.exe
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.deps.json
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.runtimeconfig.json
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Safeish.pdb
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Azure.Core.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Azure.Identity.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Humanizer.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Bcl.Cryptography.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Build.Framework.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.CodeAnalysis.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.CodeAnalysis.ExternalAccess.RazorCompiler.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Identity.Client.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.SqlServer.Server.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Microsoft.VisualStudio.SolutionPersistence.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Mono.TextTemplating.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\Newtonsoft.Json.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.ClientModel.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.CodeDom.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Composition.AttributedModel.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Composition.Convention.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Composition.Hosting.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Composition.Runtime.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Composition.TypedParts.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Configuration.ConfigurationManager.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Memory.Data.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\cs\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pl\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\tr\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\runtimes\unix\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\runtimes\win\lib\net9.0\Microsoft.Data.SqlClient.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.csproj.AssemblyReference.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.AssemblyInfoInputs.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.AssemblyInfo.cs
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.csproj.CoreCompileInputs.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.RazorAssemblyInfo.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.RazorAssemblyInfo.cs
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\rjimswa.dswa.cache.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\scopedcss\bundle\Safeish.styles.css
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\scopedcss\projectbundle\Safeish.bundle.scp.css
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\bauqpl0qmy-{0}-lugek5hnai-lugek5hnai.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\61mzh7gtuc-{0}-61n19gt1b8-61n19gt1b8.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\i1hfr2iabr-{0}-fr7q2aak1r-fr7q2aak1r.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\vrjwvsxv94-{0}-bqjiyaj88i-bqjiyaj88i.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\czikwbajpv-{0}-c2jlpeoesf-c2jlpeoesf.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\gex9yfhecd-{0}-erw9l3u2r3-erw9l3u2r3.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\bszm5oaa9n-{0}-aexeepp0ev-aexeepp0ev.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\xjn9scaxcb-{0}-d7shbmvgxk-d7shbmvgxk.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\4k1ii38em6-{0}-ausgxo2sd3-ausgxo2sd3.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\f0p4iq7eje-{0}-k8d9w2qqmf-k8d9w2qqmf.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\pgvvoej3vq-{0}-cosvhxvwiu-cosvhxvwiu.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\bbukmyy7zl-{0}-ub07r2b239-ub07r2b239.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\iagady67zv-{0}-fvhpjtyr6v-fvhpjtyr6v.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\y1ew6bqwhp-{0}-b7pk76d08c-b7pk76d08c.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\lkk8jsusga-{0}-fsbi9cje9m-fsbi9cje9m.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\ejtmgf4h2y-{0}-rzd6atqjts-rzd6atqjts.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\rv5wc1lyy7-{0}-ee0r1s7dh0-ee0r1s7dh0.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\vfv44ksuu6-{0}-dxx9fxp4il-dxx9fxp4il.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\mb5u1vdin6-{0}-jd9uben2k1-jd9uben2k1.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\8rzpeni909-{0}-khv3u5hwcm-khv3u5hwcm.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\ud5hxk1s5j-{0}-r4e9w2rdcm-r4e9w2rdcm.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\pbenmbmryt-{0}-lcd1t2u6c8-lcd1t2u6c8.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\p725v2hcjy-{0}-c2oey78nd0-c2oey78nd0.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\5r2a2s9qoi-{0}-tdbxkamptv-tdbxkamptv.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\50hmxbf6vq-{0}-j5mq2jizvt-j5mq2jizvt.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\ypezknzxqx-{0}-06098lyss8-06098lyss8.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\3hyiijh9dm-{0}-nvvlpmu67g-nvvlpmu67g.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\nlkjv6kp0n-{0}-s35ty4nyc5-s35ty4nyc5.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\817o21rhvp-{0}-pj5nd1wqec-pj5nd1wqec.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\yvu4sspnbr-{0}-46ein0sx1k-46ein0sx1k.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\iob2boqjfk-{0}-v0zj4ognzu-v0zj4ognzu.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\8ft5zyze0h-{0}-37tfw0ft22-37tfw0ft22.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\omcqxf8zqo-{0}-hrwsygsryq-hrwsygsryq.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\ge65rm91a9-{0}-pk9g2wxc8p-pk9g2wxc8p.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\eun3iv0a7f-{0}-ft3s53vfgj-ft3s53vfgj.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\vyoa6wa1yf-{0}-6cfz1n2cew-6cfz1n2cew.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\4xcgzpqesz-{0}-6pdc2jztkx-6pdc2jztkx.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\4cwd4ocf4n-{0}-493y06b0oq-493y06b0oq.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\8o199e5awl-{0}-iovd86k7lj-iovd86k7lj.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\dw0h03zn2l-{0}-vr1egmr9el-vr1egmr9el.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\x7v3gkif2i-{0}-kbrnm935zg-kbrnm935zg.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\y7ll0cx9x4-{0}-jj8uyg4cgr-jj8uyg4cgr.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\pd1yq7zjsh-{0}-y7v9cxd14o-y7v9cxd14o.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\vs6r0soj78-{0}-notf2xhcfb-notf2xhcfb.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\d6kl7zcmqo-{0}-h1s4sie4z3-h1s4sie4z3.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\jd2s7nrned-{0}-63fj8s7r0e-63fj8s7r0e.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\0gbllb4e78-{0}-0j3bgjxly4-0j3bgjxly4.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\lcemezpydl-{0}-47otxtyo56-47otxtyo56.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\8kgt549cjl-{0}-4v8eqarkd7-4v8eqarkd7.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\pdt48fcrni-{0}-l3n5xuwxn8-l3n5xuwxn8.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\vj1phsfi0c-{0}-ilo7uva0vt-ilo7uva0vt.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\jk2g9ou45h-{0}-qlccset4i1-qlccset4i1.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\d85pjbml0v-{0}-lzl9nlhx6b-lzl9nlhx6b.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\7byl3xst2k-{0}-ag7o75518u-ag7o75518u.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\2d6jq2y0op-{0}-xzw0cte36n-xzw0cte36n.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\v89e0pwgxo-{0}-0i3buxo5is-0i3buxo5is.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\cof3rzt1ig-{0}-o1o13a6vjx-o1o13a6vjx.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\3gbgqhon7j-{0}-ttgo8qnofa-ttgo8qnofa.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\h4xbyndew8-{0}-2z0ns9nrw6-2z0ns9nrw6.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\tvyh5nb0sh-{0}-muycvpuwrr-muycvpuwrr.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\7tmvuxn3fw-{0}-87fc7y1x7t-87fc7y1x7t.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\8xoqffzg39-{0}-jfsiqqwiad-jfsiqqwiad.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\xlaj7m9swi-{0}-1ihv7rhl34-1ihv7rhl34.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\iqzmbsu7cf-{0}-1ihv7rhl34-1ihv7rhl34.gz
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\staticwebassets.build.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\staticwebassets.build.json.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\staticwebassets.development.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\staticwebassets.build.endpoints.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\swae.build.ex.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.csproj.Up2Date
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\refint\Safeish.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.pdb
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.genruntimeconfig.cache
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\ref\Safeish.dll
