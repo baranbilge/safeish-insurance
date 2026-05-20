@@ -1,0 +1,463 @@
+@model Safeish.Models.User
+@{
+    ViewData["Title"] = "Profilim";
+}
+
+<style>
+    /* Profil sayfasına özel stiller */
+    .profile-nav .list-group-item {
+        border: none;
+        padding: 1rem 1.5rem;
+        margin-bottom: 0.5rem;
+        border-radius: 0.5rem !important;
+        color: #495057;
+        font-weight: 600;
+        transition: all 0.2s ease;
+    }
+    .profile-nav .list-group-item:hover {
+        background-color: #f8f9fa;
+        color: var(--primary-red);
+    }
+    .profile-nav .list-group-item.active {
+        background-color: rgba(209, 42, 42, 0.1); /* Açık kırmızı */
+        color: var(--primary-red);
+    }
+    .profile-input-group .form-control {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 0.5rem;
+        padding-left: 2.5rem;
+        transition: all 0.3s ease;
+    }
+    .profile-input-group .form-control:not([readonly]) {
+        background-color: #ffffff;
+        border-color: var(--primary-red);
+        box-shadow: 0 0 0 0.2rem rgba(209, 42, 42, 0.25);
+    }
+    .profile-input-group .input-icon {
+        position: absolute;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #6c757d;
+        z-index: 5;
+    }
+    .profile-section-card {
+        border: 1px solid #fee2e2; /* Çok açık kırmızı border */
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+</style>
+
+<div class="container py-5">
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show mb-4 rounded-4" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i> @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show mb-4 rounded-4" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i> @TempData["ErrorMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row g-4">
+        <!-- Sol Menü -->
+        <div class="col-lg-3">
+            <div class="card profile-section-card h-100 bg-white">
+                <div class="card-body p-4 text-center">
+                    <div class="d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px; background-color: var(--primary-red); color: white; border-radius: 50%; font-weight: 700; font-size: 1.8rem;">
+                        @Model.FirstName.Substring(0, 1)@Model.LastName.Substring(0, 1)
+                    </div>
+                    <h5 class="fw-bold mb-1 text-dark">@Model.FirstName @Model.LastName</h5>
+                    <p class="text-muted small mb-4">Bireysel Müşteri</p>
+                    
+                    <div class="list-group profile-sidebar shadow-sm rounded-4 border-0 mb-4 bg-white p-3">
+                    <a class="list-group-item list-group-item-action active d-flex align-items-center py-3 border-0 rounded-3 mb-2" id="list-profile-list" data-bs-toggle="list" href="#list-settings" role="tab" aria-controls="list-profile">
+                        <i class="bi bi-person-circle me-3 fs-5"></i>
+                        <span class="fw-medium">Kişisel Bilgiler</span>
+                    </a>
+                    
+                    <!-- Sigortalarım Menu Toggle -->
+                    <a class="list-group-item list-group-item-action d-flex align-items-center py-3 border-0 rounded-3 mb-2" data-bs-toggle="collapse" href="#sigortalarMenu" role="button" aria-expanded="false" aria-controls="sigortalarMenu">
+                        <i class="bi bi-shield-check me-3 fs-5"></i>
+                        <span class="fw-medium">Sigortalarım</span>
+                        <i class="bi bi-chevron-down ms-auto" style="font-size: 0.8rem;"></i>
+                    </a>
+                    <!-- Sigortalarım Submenu -->
+                    <div class="collapse" id="sigortalarMenu">
+                        <div class="list-group border-0 ps-4 pe-2 mb-2">
+                            <a class="list-group-item list-group-item-action border-0 rounded-3 py-2 text-muted" style="font-size: 0.95rem;" id="list-active-insurances-list" data-bs-toggle="list" href="#list-active-insurances" role="tab" aria-controls="list-active-insurances">
+                                <i class="bi bi-check-circle me-2"></i>Aktif Sigortalarım
+                            </a>
+                            <a class="list-group-item list-group-item-action border-0 rounded-3 py-2 text-muted" style="font-size: 0.95rem;" id="list-pending-insurances-list" data-bs-toggle="list" href="#list-pending-insurances" role="tab" aria-controls="list-pending-insurances">
+                                <i class="bi bi-hourglass-split me-2"></i>Sigorta Taleplerim
+                            </a>
+                        </div>
+                    </div>
+                        <a class="list-group-item list-group-item-action d-flex align-items-center text-dark mt-4" href="/Account/Logout">
+                            <i class="bi bi-box-arrow-right me-3 fs-5"></i> Çıkış Yap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sağ İçerik -->
+        <div class="col-lg-9">
+            <div class="tab-content" id="nav-tabContent">
+                
+                <!-- Hesap Bilgileri -->
+                <div class="tab-pane fade show active" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                    
+                    <!-- Kişisel Bilgiler -->
+                    <div class="card profile-section-card bg-white mb-4">
+                        <div class="card-body p-4 p-md-5">
+                            <form id="personalInfoForm" asp-controller="Account" asp-action="UpdateContactInfo" method="post">
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div>
+                                        <h4 class="fw-bold mb-1 text-dark">Kişisel Bilgiler</h4>
+                                        <p class="text-muted small mb-0">Hesap detaylarınızı görüntüleyin ve yönetin.</p>
+                                    </div>
+                                    <button type="button" id="btnEditProfile" class="btn btn-outline-primary btn-sm rounded-pill px-4 fw-bold d-flex align-items-center" style="border-color: #6366f1; color: #6366f1;">
+                                        <i class="bi bi-pencil me-2"></i> Düzenle
+                                    </button>
+                                </div>
+
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted small fw-bold">Ad Soyad</label>
+                                        <div class="position-relative profile-input-group">
+                                            <i class="bi bi-person input-icon"></i>
+                                            <input type="text" class="form-control edit-field" value="@Model.FirstName @Model.LastName" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted small fw-bold">E-posta Adresi</label>
+                                        <div class="position-relative profile-input-group">
+                                            <i class="bi bi-envelope input-icon"></i>
+                                            <input type="email" class="form-control" value="@Model.Email" readonly>
+                                            <small class="text-muted ms-1" style="font-size: 0.7rem;">E-posta adresi değiştirilemez.</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted small fw-bold">Telefon Numarası</label>
+                                        <div class="position-relative profile-input-group">
+                                            <i class="bi bi-telephone input-icon"></i>
+                                            <input type="tel" name="PhoneNumber" class="form-control edit-field" value="@Model.PhoneNumber" placeholder="+90 (555) 123 45 67" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label text-muted small fw-bold">Doğum Tarihi</label>
+                                        <div class="position-relative profile-input-group">
+                                            <i class="bi bi-calendar input-icon"></i>
+                                            <!-- Placeholder or actual data if available -->
+                                            <input type="text" class="form-control edit-field" value="15.04.1985" readonly> 
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label class="form-label text-muted small fw-bold">Kayıtlı Adres</label>
+                                        <div class="position-relative profile-input-group">
+                                            <i class="bi bi-geo-alt input-icon" style="top: 1.5rem;"></i>
+                                            <textarea name="Address" class="form-control edit-field pt-3" rows="2" readonly style="padding-left: 2.5rem;">@(!string.IsNullOrEmpty(Model.Address) ? Model.Address : "Atatürk Mah. Cumhuriyet Cad. No: 123 Daire: 4\nKadıköy, İstanbul / Türkiye")</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Güvenlik -->
+                    <div class="card profile-section-card bg-white">
+                        <div class="card-body p-4 p-md-5">
+                            <h4 class="fw-bold mb-1 text-dark">Güvenlik</h4>
+                            <p class="text-muted small mb-4">Hesap güvenliğiniz için şifrenizi düzenli olarak güncelleyin.</p>
+                            
+                            <div class="row align-items-end">
+                                <div class="col-md-8 mb-3 mb-md-0">
+                                    <label class="form-label text-muted small fw-bold">Mevcut Şifre</label>
+                                    <input type="password" class="form-control bg-light border-0" style="padding: 0.75rem 1rem; border-radius: 0.5rem;" value="********" readonly>
+                                </div>
+                                <div class="col-md-4 text-md-end">
+                                    <button class="btn text-white rounded-3 px-4 py-2 fw-bold d-flex align-items-center justify-content-center w-100" style="background-color: #5c6bc0;" type="button" data-bs-toggle="collapse" data-bs-target="#changePasswordCollapse">
+                                        <i class="bi bi-key me-2"></i> Şifre Değiştir
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Collapse for actual password change form -->
+                            <div class="collapse mt-4" id="changePasswordCollapse">
+                                <div class="card card-body bg-light border-0 rounded-4">
+                                    <form asp-controller="Account" asp-action="ChangePassword" method="post">
+                                        <div class="row g-3">
+                                            <div class="col-md-12">
+                                                <label class="form-label text-muted small">Mevcut Şifre</label>
+                                                <input type="password" class="form-control" name="CurrentPassword" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label text-muted small">Yeni Şifre</label>
+                                                <input type="password" class="form-control" name="NewPassword" required>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="form-label text-muted small">Yeni Şifre (Tekrar)</label>
+                                                <input type="password" class="form-control" name="ConfirmNewPassword" required>
+                                            </div>
+                                            <div class="col-12 mt-3 text-end">
+                                                <button type="submit" class="btn btn-primary rounded-pill px-4 fw-bold">Güncelle</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Aktif Sigortalarım Tab -->
+                <div class="tab-pane fade" id="list-active-insurances" role="tabpanel" aria-labelledby="list-active-insurances-list">
+                    <div class="card profile-section-card bg-white shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h4 class="fw-bold mb-4 text-dark">Aktif Sigortalarım</h4>
+                            @{
+                                var activePolicies = Model.Policies != null ? Model.Policies.Where(p => p.Status == "Aktif").OrderByDescending(p => p.StartDate).ToList() : new List<Safeish.Models.UserPolicy>();
+                            }
+                            @if (activePolicies.Any())
+                            {
+                                <div class="row g-4">
+                                    @foreach(var policy in activePolicies)
+                                    {
+                                        <div class="col-md-6">
+                                            <div class="card border-0 shadow-sm rounded-4 h-100" style="background-color: #f8f9fa;">
+                                                <div class="card-body p-4">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <h5 class="fw-bold mb-0 text-dark">@policy.PackageName</h5>
+                                                        <span class="badge bg-success">@policy.Status</span>
+                                                    </div>
+                                                    <p class="text-muted small mb-2"><i class="bi bi-calendar-event me-2"></i><strong>Başlangıç:</strong> @policy.StartDate.ToShortDateString()</p>
+                                                    <p class="text-muted small mb-0"><i class="bi bi-shield-check me-2"></i><strong>Bitiş:</strong> @policy.EndDate.ToShortDateString()</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="alert rounded-3 border-0 d-flex align-items-center p-4" style="background-color: rgba(13, 110, 253, 0.05);">
+                                    <i class="bi bi-info-circle-fill fs-3 me-3 text-primary"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1 text-dark">Henüz aktif bir sigortanız bulunmuyor.</h6>
+                                        <p class="mb-0 small text-muted">Aşağıdan teklif taleplerinizi kontrol edebilir veya yeni teklif alabilirsiniz.</p>
+                                    </div>
+                                </div>
+                                <a href="/#sigortalar" class="btn btn-primary rounded-pill px-4 py-2 fw-bold mt-3">Sigortaları İncele</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sigorta Taleplerim Tab -->
+                <div class="tab-pane fade" id="list-pending-insurances" role="tabpanel" aria-labelledby="list-pending-insurances-list">
+                    <div class="card profile-section-card bg-white shadow-sm border-0 rounded-4">
+                        <div class="card-body p-4 p-md-5">
+                            <h4 class="fw-bold mb-4 text-dark">Sigorta Taleplerim</h4>
+                            @{
+                                var pendingPolicies = Model.Policies != null ? Model.Policies.Where(p => p.Status == "Görüşme bekleniyor" || p.Status == "İptal Edildi").OrderByDescending(p => p.StartDate).ToList() : new List<Safeish.Models.UserPolicy>();
+                            }
+                            @if (pendingPolicies.Any())
+                            {
+                                <div class="row g-4">
+                                    @foreach(var policy in pendingPolicies)
+                                    {
+                                        <div class="col-md-6">
+                                            <div class="card border-0 shadow-sm rounded-4 h-100" style="background-color: #f8f9fa;">
+                                                <div class="card-body p-4">
+                                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                                        <h5 class="fw-bold mb-0 text-dark">@policy.PackageName</h5>
+                                                        <span class="badge" style="background-color: @(policy.Status == "Görüşme bekleniyor" ? "#ffc107" : "#6c757d"); color: @(policy.Status == "Görüşme bekleniyor" ? "#000" : "#fff");">@policy.Status</span>
+                                                    </div>
+                                                    <p class="text-muted small mb-2"><i class="bi bi-calendar-event me-2"></i><strong>Başvuru:</strong> @policy.StartDate.ToShortDateString()</p>
+                                                    <div class="d-flex justify-content-between align-items-center mt-3">
+                                                        <p class="text-muted small mb-0"><i class="bi bi-shield-check me-2"></i><strong>Poliçe:</strong> Safeish Güvencesi</p>
+                                                        @if (policy.Status == "Görüşme bekleniyor")
+                                                        {
+                                                            <button class="btn btn-sm btn-outline-danger cancel-policy-btn" data-policy-id="@policy.Id">İptal Et</button>
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="alert rounded-3 border-0 d-flex align-items-center p-4" style="background-color: rgba(209, 42, 42, 0.05);">
+                                    <i class="bi bi-info-circle-fill fs-3 me-3" style="color: var(--primary-red);"></i>
+                                    <div>
+                                        <h6 class="fw-bold mb-1 text-dark">Henüz bir teklif talebiniz bulunmuyor.</h6>
+                                        <p class="mb-0 small text-muted">Sigorta tekliflerimizi inceleyerek hemen kendinizi güvence altına alabilirsiniz.</p>
+                                    </div>
+                                </div>
+                                <a href="/#sigortalar" class="btn btn-primary rounded-pill px-4 py-2 fw-bold mt-3">Yeni Teklif Al</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cancel Confirm Modal -->
+<div class="modal fade" id="cancelConfirmModal" tabindex="-1" aria-labelledby="cancelConfirmModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0 shadow">
+      <div class="modal-header border-0 bg-light rounded-top-4">
+        <h5 class="modal-title fw-bold text-dark" id="cancelConfirmModalLabel"><i class="bi bi-exclamation-triangle text-warning me-2"></i>Talebi İptal Et</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 text-center">
+        <i class="bi bi-x-circle text-danger mb-3 d-block" style="font-size: 3rem;"></i>
+        <p class="fs-5 mb-0">Bu teklif talebini iptal etmek istediğinize emin misiniz?</p>
+      </div>
+      <div class="modal-footer border-0 d-flex justify-content-center pb-4">
+        <button type="button" class="btn btn-light rounded-pill px-4 fw-bold" data-bs-dismiss="modal">Vazgeç</button>
+        <button type="button" class="btn btn-danger rounded-pill px-4 fw-bold" id="confirmCancelBtn">Evet, İptal Et</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Cancel Success Modal -->
+<div class="modal fade" id="cancelSuccessModal" tabindex="-1" aria-labelledby="cancelSuccessModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-4 border-0 shadow">
+      <div class="modal-header border-0 bg-success text-white rounded-top-4">
+        <h5 class="modal-title fw-bold" id="cancelSuccessModalLabel"><i class="bi bi-check-circle-fill me-2"></i>Başarılı</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4 text-center">
+        <i class="bi bi-check-circle text-success mb-3 d-block" style="font-size: 4rem;"></i>
+        <p class="fs-5 mb-0" id="cancelSuccessModalMessage">Teklif talebiniz başarıyla iptal edildi.</p>
+      </div>
+      <div class="modal-footer border-0 d-flex justify-content-center pb-4">
+        <button type="button" class="btn btn-success rounded-pill px-4 fw-bold" id="cancelSuccessOkBtn" data-bs-dismiss="modal">Tamam</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Edit profile form logic
+            const btnEdit = document.getElementById('btnEditProfile');
+            const editFields = document.querySelectorAll('.edit-field');
+            const form = document.getElementById('personalInfoForm');
+            let isEditing = false;
+
+            if(btnEdit) {
+                btnEdit.addEventListener('click', function() {
+                    isEditing = !isEditing;
+
+                    if (isEditing) {
+                        editFields.forEach(field => field.removeAttribute('readonly'));
+                        btnEdit.innerHTML = '<i class="bi bi-check-lg me-2"></i> Kaydet';
+                        btnEdit.classList.remove('btn-outline-primary');
+                        btnEdit.classList.add('btn-primary');
+                        btnEdit.style.borderColor = 'var(--primary-red)';
+                        btnEdit.style.backgroundColor = 'var(--primary-red)';
+                        btnEdit.style.color = '#fff';
+                        editFields[0].focus();
+                    } else {
+                        form.submit();
+                    }
+                });
+            }
+
+            // Fix for nested tabs showing at the same time
+            const tabLinks = document.querySelectorAll('a[data-bs-toggle="list"]');
+            tabLinks.forEach(function(link) {
+                link.addEventListener('show.bs.tab', function (e) {
+                    document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('show', 'active'));
+                    tabLinks.forEach(t => t.classList.remove('active'));
+                });
+            });
+
+            // Restore active tab
+            var activeTab = '@TempData["ActiveTab"]';
+            var hashTab = window.location.hash.substring(1);
+            if (hashTab) activeTab = hashTab;
+            
+            if (activeTab) {
+                var triggerEl = document.querySelector('#' + activeTab + '-list');
+                if (triggerEl) {
+                    var tab = new bootstrap.Tab(triggerEl);
+                    tab.show();
+                    
+                    if(activeTab === 'list-active-insurances' || activeTab === 'list-pending-insurances') {
+                        var menu = new bootstrap.Collapse(document.getElementById('sigortalarMenu'), { toggle: false });
+                        menu.show();
+                    }
+                }
+            }
+
+            // Cancel Policy Modals
+            var cancelModalEl = document.getElementById('cancelConfirmModal');
+            var successModalEl = document.getElementById('cancelSuccessModal');
+            
+            if (cancelModalEl && successModalEl) {
+                var cancelModal = new bootstrap.Modal(cancelModalEl);
+                var successModal = new bootstrap.Modal(successModalEl);
+                var policyIdToCancel = null;
+
+                document.querySelectorAll('.cancel-policy-btn').forEach(function(btn) {
+                    btn.addEventListener('click', function() {
+                        policyIdToCancel = this.getAttribute('data-policy-id');
+                        cancelModal.show();
+                    });
+                });
+
+                document.getElementById('confirmCancelBtn').addEventListener('click', function() {
+                    if (policyIdToCancel) {
+                        fetch('/Account/CancelPolicy', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]')?.value || ''
+                            },
+                            body: 'policyId=' + policyIdToCancel
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            cancelModal.hide();
+                            if (data.success) {
+                                document.getElementById('cancelSuccessModalMessage').innerText = data.message;
+                                successModal.show();
+                            } else {
+                                alert(data.message);
+                            }
+                        });
+                    }
+                });
+
+                document.getElementById('cancelSuccessOkBtn').addEventListener('click', function() {
+                    window.location.hash = '#list-pending-insurances';
+                    window.location.reload();
+                });
+                
+                successModalEl.addEventListener('hidden.bs.modal', function() {
+                    window.location.hash = '#list-pending-insurances';
+                    window.location.reload();
+                });
+            }
+        });
+    </script>
+}

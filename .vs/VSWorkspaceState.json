@@ -1,7 +1,13 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\bin\\Debug",
+    "\\Data",
+    "\\Models",
+    "\\Models\\ViewModels",
+    "\\Views",
+    "\\Views\\Account"
   ],
-  "SelectedNode": "\\Program.cs",
+  "SelectedNode": "\\Views\\Account",
   "PreviewInSolutionExplorer": false
 }

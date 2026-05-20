@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Safeish.Data;
 
@@ -11,9 +12,11 @@ using Safeish.Data;
 namespace Safeish.Migrations
 {
     [DbContext(typeof(SafeishDbContext))]
-    partial class SafeishDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260520102635_UpdateKonutSigortasiAndPackages")]
+    partial class UpdateKonutSigortasiAndPackages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -193,12 +196,6 @@ namespace Safeish.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("AlternativePhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
@@ -216,9 +213,6 @@ namespace Safeish.Migrations
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ResetPasswordToken")
@@ -243,22 +237,14 @@ namespace Safeish.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("InsurancePackageId")
+                    b.Property<int>("InsurancePackageId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("PackageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -287,7 +273,9 @@ namespace Safeish.Migrations
                 {
                     b.HasOne("Safeish.Models.InsurancePackage", "InsurancePackage")
                         .WithMany("Policies")
-                        .HasForeignKey("InsurancePackageId");
+                        .HasForeignKey("InsurancePackageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Safeish.Models.User", "User")
                         .WithMany("Policies")

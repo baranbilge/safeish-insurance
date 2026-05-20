@@ -14,11 +14,14 @@ namespace Safeish.Models
         [ForeignKey("UserId")]
         public virtual User User { get; set; }
 
-        [Required]
-        public int InsurancePackageId { get; set; }
+        public int? InsurancePackageId { get; set; }
 
         [ForeignKey("InsurancePackageId")]
         public virtual InsurancePackage InsurancePackage { get; set; }
+
+        public string PackageName { get; set; }
+
+        public string Status { get; set; } = "Görüşme bekleniyor";
 
         public DateTime StartDate { get; set; }
         

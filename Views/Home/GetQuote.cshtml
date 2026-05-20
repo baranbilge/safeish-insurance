@@ -1,0 +1,73 @@
+@model Safeish.Models.ViewModels.GetQuoteViewModel
+@{
+    ViewData["Title"] = "Teklif Alın";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden transition-hover">
+                <div class="card-header border-0 text-center py-5" style="background: linear-gradient(135deg, #0d6efd, #0dcaf0); color: white;">
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center shadow-lg" style="width: 70px; height: 70px; background: white; color: #0d6efd; border-radius: 20px; font-weight: 900; font-size: 2rem; transform: rotate(-10deg);">
+                            <div style="transform: rotate(10deg);"><i class="bi bi-file-earmark-text-fill"></i></div>
+                        </div>
+                    </div>
+                    <h3 class="mb-0 fw-bold">Teklif Formu</h3>
+                    <p class="mb-0 mt-2 opacity-75">İletişim bilgilerinizi bırakın, size en uygun teklifi sunalım.</p>
+                </div>
+                <div class="card-body p-5 bg-white">
+                    <form asp-action="GetQuote" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3 small"></div>
+                        <input type="hidden" asp-for="PackageId" />
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <input asp-for="FirstName" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                                    <label asp-for="FirstName" class="text-muted ms-2"><i class="bi bi-person me-2"></i>Adınız</label>
+                                    <span asp-validation-for="FirstName" class="text-danger small mt-1 d-block"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="LastName" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                                    <label asp-for="LastName" class="text-muted ms-2">Soyadınız</label>
+                                    <span asp-validation-for="LastName" class="text-danger small mt-1 d-block"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating mb-4">
+                            <input asp-for="Email" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                            <label asp-for="Email" class="text-muted ms-2"><i class="bi bi-envelope me-2"></i>E-posta Adresi</label>
+                            <span asp-validation-for="Email" class="text-danger small mt-1 d-block"></span>
+                        </div>
+                        
+                        <div class="form-floating mb-4">
+                            <input asp-for="PhoneNumber" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                            <label asp-for="PhoneNumber" class="text-muted ms-2"><i class="bi bi-telephone me-2"></i>Telefon Numaranız</label>
+                            <span asp-validation-for="PhoneNumber" class="text-danger small mt-1 d-block"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-3 rounded-pill fw-bold shadow-sm transition-hover">Teklif İste <i class="bi bi-arrow-right ms-2"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .transition-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn.transition-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0.5rem 1rem rgba(13, 110, 253, 0.25) !important;
+    }
+</style>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

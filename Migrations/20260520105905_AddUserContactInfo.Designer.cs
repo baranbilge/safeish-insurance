@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Safeish.Data;
 
@@ -11,9 +12,11 @@ using Safeish.Data;
 namespace Safeish.Migrations
 {
     [DbContext(typeof(SafeishDbContext))]
-    partial class SafeishDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260520105905_AddUserContactInfo")]
+    partial class AddUserContactInfo
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -243,22 +246,14 @@ namespace Safeish.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("InsurancePackageId")
+                    b.Property<int>("InsurancePackageId")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("PackageName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Status")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -287,7 +282,9 @@ namespace Safeish.Migrations
                 {
                     b.HasOne("Safeish.Models.InsurancePackage", "InsurancePackage")
                         .WithMany("Policies")
-                        .HasForeignKey("InsurancePackageId");
+                        .HasForeignKey("InsurancePackageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Safeish.Models.User", "User")
                         .WithMany("Policies")

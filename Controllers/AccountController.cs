@@ -190,5 +190,90 @@ namespace Safeish.Controllers
         {
             return HashPassword(enteredPassword) == storedHash;
         }
+
+        [Microsoft.AspNetCore.Authorization.Authorize]
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (int.TryParse(userIdStr, out int userId))
+            {
+                var user = await _context.Users.Include(u => u.Policies).FirstOrDefaultAsync(u => u.Id == userId);
+                if (user != null)
+                {
+                    return View(user);
+                }
+            }
+            return RedirectToAction("Login");
+        }
+
+        [Microsoft.AspNetCore.Authorization.Authorize]
+        [HttpPost]
+        public async Task<IActionResult> UpdateContactInfo(UpdateProfileViewModel model)
+        {
+            var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (int.TryParse(userIdStr, out int userId))
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+                if (user != null)
+                {
+                    user.PhoneNumber = model.PhoneNumber;
+                    user.AlternativePhoneNumber = model.AlternativePhoneNumber;
+                    user.Address = model.Address;
+                    await _context.SaveChangesAsync();
+                    
+                    TempData["SuccessMessage"] = "İletişim bilgileriniz başarıyla güncellendi.";
+                }
+            }
+            return RedirectToAction("Profile", null, null, "list-contact");
+        }
+
+        [Microsoft.AspNetCore.Authorization.Authorize]
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                TempData["ErrorMessage"] = "Lütfen formdaki hataları düzeltin.";
+                return RedirectToAction("Profile", null, null, "list-settings");
+            }
+
+            var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (int.TryParse(userIdStr, out int userId))
+            {
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
+                if (user != null)
+                {
+                    if (!VerifyPassword(model.CurrentPassword, user.PasswordHash))
+                    {
+                        TempData["ErrorMessage"] = "Mevcut şifrenizi yanlış girdiniz.";
+                        return RedirectToAction("Profile", null, null, "list-settings");
+                    }
+
+                    user.PasswordHash = HashPassword(model.NewPassword);
+                    await _context.SaveChangesAsync();
+                    
+                    TempData["SuccessMessage"] = "Şifreniz başarıyla güncellendi.";
+                }
+            }
+            return RedirectToAction("Profile", null, null, "list-settings");
+        }
+        [Microsoft.AspNetCore.Authorization.Authorize]
+        [HttpPost]
+        public async Task<IActionResult> CancelPolicy(int policyId)
+        {
+            var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (int.TryParse(userIdStr, out int userId))
+            {
+                var policy = await _context.UserPolicies.FirstOrDefaultAsync(p => p.Id == policyId && p.UserId == userId);
+                if (policy != null && policy.Status == "Görüşme bekleniyor")
+                {
+                    policy.Status = "İptal Edildi";
+                    await _context.SaveChangesAsync();
+                    return Json(new { success = true, message = "Teklif talebiniz başarıyla iptal edildi." });
+                }
+            }
+            return Json(new { success = false, message = "İşlem gerçekleştirilemedi." });
+        }
     }
 }

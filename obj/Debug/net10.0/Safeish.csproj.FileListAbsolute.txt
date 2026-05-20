@@ -595,7 +595,6 @@ C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\rjsmcshtml.dswa.
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\scopedcss\bundle\Safeish.styles.css
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\scopedcss\projectbundle\Safeish.bundle.scp.css
-C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\bauqpl0qmy-{0}-lugek5hnai-lugek5hnai.gz
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\61mzh7gtuc-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\i1hfr2iabr-{0}-fr7q2aak1r-fr7q2aak1r.gz
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\vrjwvsxv94-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -670,3 +669,5 @@ C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\refint\Safeish.d
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.pdb
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.genruntimeconfig.cache
 C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\ref\Safeish.dll
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\Safeish.sourcelink.json
+C:\Users\newsg\Desktop\safeish-insurance-main\obj\Debug\net10.0\compressed\bauqpl0qmy-{0}-6vcyw4adk6-6vcyw4adk6.gz

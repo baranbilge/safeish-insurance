@@ -1,109 +1,100 @@
 # Safeish - Sigortacılık Yönetim Platformu
 
-## Proje Hakkında
-Safeish, kullanıcıların farklı sigorta türlerini inceleyebildiği, bu türlere ait özel paketleri satın alabildiği ve finansal danışmanlık hizmetlerine erişebildiği kapsamlı bir sigortacılık web uygulamasıdır. Proje, modern web standartlarına uygun olarak .NET 10 ve ASP.NET Core MVC mimarisi kullanılarak geliştirilmiştir.
+Safeish, bireysel müşterilerin farklı sigorta türlerini inceleyebildiği, bütçe ve ihtiyaçlarına uygun paketler için anlık veya detaylı teklif talepleri oluşturabildiği, aktif/bekleyen poliçelerini dinamik olarak yönetebildiği modern ve güvenli bir dijital sigortacılık web platformudur.
 
-## Temel Özellikler
-- **Kullanıcı Kimlik Doğrulama:** Kayıt olma ve giriş yapma işlevleri. E-posta doğrulamalı parola kurtarma akışı.
-- **Dinamik Sigorta Paketleri:** Sağlık, Araç vb. çeşitli sigorta türlerinin ve bu türlere ait alt paketlerin dinamik olarak listelenmesi.
-- **Modern Tek Sayfa (One-Page) Tasarımı:** Kurumsal güven hissi veren, sigortacılık sektörüne uygun, mobil uyumlu (responsive) UI/UX tasarımı.
-- **Etkileşimli Bileşenler:** Kampanya ve sigorta slider'ları, özel marka logosu entegrasyonu ve dinamik başa dön butonu.
-- **Genişletilmiş Menü Yapısı:** Ana Sayfa, Sigortalar, Anlaşmalı Kurumlar, Finansal Danışmanlık ve İletişim bölümleri.
+Bu proje, **.NET 10.0** ve **ASP.NET Core MVC** mimarisi kullanılarak geliştirilmiş olup, kurumsal standartlara ve modern yazılım prensiplerine uygun olarak tasarlanmıştır.
 
-## Kullanılan Teknolojiler ve Mimari
-- **Framework:** .NET 10.0
-- **Mimari:** ASP.NET Core MVC (Model-View-Controller)
+---
+
+##  Temel Özellikler
+
+###  Kimlik Doğrulama ve Güvenlik
+- **Cookie Authentication:** Güvenli oturum yönetimi ASP.NET Core bünyesindeki Cookie ara yazılımı ile sağlanır.
+- **Şifreleme (Hashing):** Kullanıcı şifreleri veritabanına düz metin olarak değil, **SHA-256** algoritması ile şifrelenerek kaydedilir.
+- **Yetkilendirme Koruması:** Profil, şifre değiştirme, iletişim bilgisi güncelleme ve poliçe iptal işlemleri `[Authorize]` özniteliği ile korunmaktadır.
+- **Şifre Sıfırlama Akışı:** Güvenli token (`ResetPasswordToken`) üretilerek süreli şifre sıfırlama simülasyonu entegre edilmiştir.
+
+###  Profil ve Hesap Yönetimi
+- **Kullanıcı Paneli:** Kullanıcılar telefon, alternatif telefon ve adres bilgilerini anlık olarak güncelleyebilir.
+- **Poliçe Yönetimi:** "Sigortalarım" sekmesinden geçmiş ve bekleyen teklifler görüntülenebilir. "Görüşme bekleniyor" statüsündeki poliçe talepleri asenkron (AJAX) olarak iptal edilebilir.
+
+###  Dinamik Sigorta Paketleri ve Teklif Sistemi
+- **Dinamik Listeleme:** Sağlık, Kasko ve Konut Sigortası altındaki tüm paketler (Temel, Standart, Premium) veritabanından dinamik olarak çekilir.
+- **Hızlı Teklif (AJAX):** Oturum açmış kullanıcılar ana sayfadaki paketlerden tek tıkla, sayfa yenilenmeden teklif talebi oluşturabilir.
+- **Akıllı Formlar:** Giriş yapmış kullanıcıların bilgileri detaylı teklif formlarına otomatik olarak doldurulur (prepopulate), böylece kullanıcı deneyimi (UX) artırılır.
+
+---
+
+##  Kullanılan Teknolojiler
+
+- **Backend:** C#, .NET 10.0, ASP.NET Core MVC
+- **Veri Erişim Katmanı:** Entity Framework Core 10.0.7 (Code-First)
 - **Veritabanı:** Microsoft SQL Server
-- **ORM:** Entity Framework Core (Code-First Yaklaşımı)
-- **Kimlik Doğrulama:** ASP.NET Core Identity
-- **Front-End:** HTML5, CSS3, Bootstrap 5, JavaScript
+- **Frontend:** HTML5, CSS3, JavaScript (Fetch API), Bootstrap 5, Bootstrap Icons
+- **Doğrulama:** Data Annotations, jQuery Validation & Unobtrusive Validation
 
-### Bağımlılıklar (NuGet Paketleri)
-- `Microsoft.EntityFrameworkCore`
-- `Microsoft.EntityFrameworkCore.SqlServer`
-- `Microsoft.EntityFrameworkCore.Tools`
-- `Microsoft.AspNetCore.Identity.EntityFrameworkCore`
+---
 
-## Veritabanı ve ER Diyagramı
-Projenin veritabanı yapısı Entity Framework Core Code-First yaklaşımıyla tasarlanmıştır.
+##  Veritabanı Mimarisi
 
-```mermaid
-erDiagram
-    USER ||--o{ POLICY : owns
-    INSURANCE_TYPE ||--|{ INSURANCE_PACKAGE : contains
-    INSURANCE_PACKAGE ||--o{ POLICY : generates
-    
-    USER {
-        int Id PK
-        string Email
-        string PasswordHash
-        string FullName
-        string PhoneNumber
-    }
-    
-    INSURANCE_TYPE {
-        int Id PK
-        string TypeName
-        string Description
-    }
-    
-    INSURANCE_PACKAGE {
-        int Id PK
-        int InsuranceTypeId FK
-        string PackageName
-        decimal Price
-        string Details
-    }
-    
-    POLICY {
-        int Id PK
-        int UserId FK
-        int PackageId FK
-        DateTime StartDate
-        DateTime EndDate
-        bool IsActive
-    }
-    
-    CORPORATE_PARTNER {
-        int Id PK
-        string InstitutionName
-        string Sector
-        string ContactInfo
-    }
-```
+Sistem, Code-First yaklaşımı ile tasarlanmış ilişkisel bir veritabanı kullanır:
 
-## Kurulum ve Çalıştırma
+1. **`InsuranceType` (1) ─── (N) `InsurancePackage`**
+   - Her sigorta türünün birden fazla alt paketi bulunur.
+2. **`User` (1) ─── (N) `UserPolicy`**
+   - Bir kullanıcı sistem üzerinden birden fazla sigorta teklifi isteyebilir.
+3. **`InsurancePackage` (1) ─── (N) `UserPolicy`**
+   - Poliçeler, ilgili sigorta paketlerine referanslıdır.
 
-Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
+*Not: Sistem ilk kez ayağa kaldırıldığında (Seed Data), örnek sigorta türleri ve paketleri veritabanına otomatik olarak eklenir.*
 
-1. **Depoyu Klonlayın:**
-   ```bash
-   git clone https://github.com/baranbilge/safeish-insurance.git
-   cd safeish-insurance
-   ```
+---
 
-2. **Bağlantı Dizesini (Connection String) Ayarlayın:**
-   `appsettings.json` dosyası içerisindeki `DefaultConnection` değerini kendi SQL Server yapılandırmanıza göre güncelleyin:
-   ```json
-   "ConnectionStrings": {
-     "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=SafeishDb;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False"
-   }
-   ```
+##  Proje Dizin Yapısı
 
-3. **Gerekli Paketleri Yükleyin ve Veritabanını Oluşturun:**
-   Aşağıdaki komutları kullanarak bağımlılıkları yükleyin ve Code-First migration'larını veritabanına uygulayın:
-   ```bash
-   dotnet restore
-   dotnet ef database update
-   ```
+```text
+Safeish/
+├── Controllers/
+│   ├── AccountController.cs       # Kimlik doğrulama, profil ve şifre işlemleri
+│   └── HomeController.cs          # Ana sayfa listeleme ve teklif oluşturma süreçleri
+├── Data/
+│   └── SafeishDbContext.cs        # EF Core Context ve Seed Data yapılandırması
+├── Migrations/                    # Code-First veritabanı göç (migration) geçmişi
+├── Models/
+│   ├── ViewModels/                # Veri transfer nesneleri (Login, Register, GetQuote vb.)
+│   ├── User.cs, UserPolicy.cs     # Kullanıcı ve Poliçe varlıkları
+│   └── InsuranceType.cs, ...      # Sigorta varlıkları
+├── Views/
+│   ├── Account/                   # Kullanıcı arayüzleri (Giriş, Kayıt, Profil)
+│   ├── Home/                      # Ana sayfa ve Teklif formları
+│   └── Shared/                    # _Layout.cshtml (ortak şablon)
+├── Program.cs                     # Bağımlılık enjeksiyonu (DI) ve Middleware ayarları
+└── appsettings.json               # Veritabanı Connection String ayarları
+ Kurulum ve Çalıştırma Adımları
+Projeyi kendi bilgisayarınızda (lokal ortam) çalıştırmak için aşağıdaki adımları izleyin:
 
-4. **Projeyi Başlatın:**
-   ```bash
-   dotnet run
-   ```
+1. Depoyu Klonlayın
+Bash
+git clone [https://github.com/baranbilge/safeish-insurance.git](https://github.com/baranbilge/safeish-insurance.git)
+cd safeish-insurance
 
-## Proje Dizin Yapısı
-- `/Controllers`: Uygulamanın yönlendirme ve iş mantığını barındırır (Örn. `HomeController`, `AccountController`).
-- `/Models`: Veritabanı tablolarına karşılık gelen C# varlık (entity) sınıflarını ve `SafeishDbContext` sınıfını içerir.
-- `/Views`: Kullanıcı arayüzü dosyalarını (`.cshtml`) barındırır.
-- `/wwwroot`: Projeye ait CSS, JavaScript, resim ve benzeri statik dosyaları içerir.
+2. Veritabanı Bağlantısını Ayarlayın
+appsettings.json dosyasını açarak DefaultConnection dizesini kendi SQL Server yapılandırmanıza göre güncelleyin.
+
+JSON
+"ConnectionStrings": {
+  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=SafeishDb;Trusted_Connection=True;MultipleActiveResultSets=true"
+}
+
+3. Paketleri Yükleyin ve Veritabanını Oluşturun
+Terminal (Command Prompt / PowerShell) üzerinden proje dizinindeyken aşağıdaki komutları çalıştırın. Bu komutlar gerekli paketleri kuracak ve tabloları/örnek verileri SQL Server'a aktaracaktır:
+
+Bash
+dotnet restore
+dotnet ef database update
+
+4. Projeyi Başlatın
+Bash
+dotnet run
+
+Uygulama başarıyla derlendiğinde tarayıcınızdan http://localhost:5010 veya terminalde belirtilen adrese giderek projeyi görüntüleyebilirsiniz.

@@ -3,64 +3,70 @@
     ViewData["Title"] = "Kayıt Ol";
 }
 
-<div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-        <div class="card shadow-lg border-0 rounded-lg">
-            <div class="card-header bg-primary text-white text-center py-4">
-                <h3 class="mb-0 font-weight-light"><i class="bi bi-person-plus"></i> Safeish'e Kayıt Ol</h3>
-            </div>
-            <div class="card-body p-5 bg-light">
-                <form asp-action="Register" method="post">
-                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+<div class="container py-5" style="background-color: #f8f9fa;">
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-6">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden transition-hover">
+                <div class="card-header border-0 text-center py-5" style="background: linear-gradient(135deg, var(--primary-red), #ff6b6b); color: white;">
+                    <div class="d-flex justify-content-center mb-3">
+                        <div class="d-flex align-items-center justify-content-center shadow-lg" style="width: 70px; height: 70px; background: white; color: var(--primary-red); border-radius: 20px; font-weight: 900; font-size: 2rem; transform: rotate(-10deg);">
+                            <div style="transform: rotate(10deg);">S</div>
+                        </div>
+                    </div>
+                    <h3 class="mb-0 fw-bold">Kayıt Ol</h3>
                     
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-floating mb-3 mb-md-0">
-                                <input asp-for="FirstName" class="form-control" />
-                                <label asp-for="FirstName"></label>
-                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="card-body p-5 bg-white">
+                    <form asp-action="Register" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3 small"></div>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <input asp-for="FirstName" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                                    <label asp-for="FirstName" class="text-muted ms-2"><i class="bi bi-person me-2"></i>Adınız</label>
+                                    <span asp-validation-for="FirstName" class="text-danger small mt-1 d-block"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="LastName" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                                    <label asp-for="LastName" class="text-muted ms-2">Soyadınız</label>
+                                    <span asp-validation-for="LastName" class="text-danger small mt-1 d-block"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-floating">
-                                <input asp-for="LastName" class="form-control" />
-                                <label asp-for="LastName"></label>
-                                <span asp-validation-for="LastName" class="text-danger"></span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="form-floating mb-3">
-                        <input asp-for="Email" class="form-control" />
-                        <label asp-for="Email"></label>
-                        <span asp-validation-for="Email" class="text-danger"></span>
-                    </div>
-                    
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <div class="form-floating mb-3 mb-md-0">
-                                <input asp-for="Password" class="form-control" />
-                                <label asp-for="Password"></label>
-                                <span asp-validation-for="Password" class="text-danger"></span>
+                        <div class="form-floating mb-4">
+                            <input asp-for="Email" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                            <label asp-for="Email" class="text-muted ms-2"><i class="bi bi-envelope me-2"></i>E-posta Adresi</label>
+                            <span asp-validation-for="Email" class="text-danger small mt-1 d-block"></span>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <div class="form-floating mb-3 mb-md-0">
+                                    <input asp-for="Password" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                                    <label asp-for="Password" class="text-muted ms-2"><i class="bi bi-lock me-2"></i>Parola</label>
+                                    <span asp-validation-for="Password" class="text-danger small mt-1 d-block"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input asp-for="ConfirmPassword" class="form-control bg-light border-0 rounded-3 px-4" placeholder=" " />
+                                    <label asp-for="ConfirmPassword" class="text-muted ms-2"><i class="bi bi-check-circle me-2"></i>Parola Tekrar</label>
+                                    <span asp-validation-for="ConfirmPassword" class="text-danger small mt-1 d-block"></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-floating mb-3 mb-md-0">
-                                <input asp-for="ConfirmPassword" class="form-control" />
-                                <label asp-for="ConfirmPassword"></label>
-                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="mt-4 mb-0 text-center">
-                        <button type="submit" class="btn btn-primary btn-block w-100 py-3">Kayıt Ol</button>
-                    </div>
-                </form>
-            </div>
-            <div class="card-footer text-center py-3">
-                <div class="small">
-                    Zaten bir hesabınız var mı? <a asp-action="Login" class="text-decoration-none fw-bold">Giriş Yap</a>
+                        <button type="submit" class="btn w-100 py-3 rounded-pill fw-bold shadow-sm transition-hover text-white" style="background-color: var(--primary-red); border-color: var(--primary-red);">Hesap Oluştur <i class="bi bi-person-plus ms-2"></i></button>
+                    </form>
+                </div>
+                <div class="card-footer border-0 text-center py-4" style="background-color: #f8f9fa;">
+                    <p class="mb-0 text-muted small">
+                        Zaten bir hesabınız var mı? <a asp-action="Login" class="text-decoration-none fw-bold ms-1" style="color: var(--primary-red);">Hemen Giriş Yapın</a>
+                    </p>
                 </div>
             </div>
         </div>
