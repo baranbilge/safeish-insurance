@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\bin",
     "\\bin\\Debug",
-    "\\Data",
+    "\\Controllers",
     "\\Models",
-    "\\Models\\ViewModels",
     "\\Views",
-    "\\Views\\Account"
+    "\\Views\\Home"
   ],
-  "SelectedNode": "\\Views\\Account",
+  "SelectedNode": "\\Views\\Home\\ChatBot.cshtml",
   "PreviewInSolutionExplorer": false
 }

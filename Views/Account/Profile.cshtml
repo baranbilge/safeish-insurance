@@ -267,7 +267,7 @@
                         <div class="card-body p-4 p-md-5">
                             <h4 class="fw-bold mb-4 text-dark">Sigorta Taleplerim</h4>
                             @{
-                                var pendingPolicies = Model.Policies != null ? Model.Policies.Where(p => p.Status == "Görüşme bekleniyor" || p.Status == "İptal Edildi").OrderByDescending(p => p.StartDate).ToList() : new List<Safeish.Models.UserPolicy>();
+                                var pendingPolicies = Model.Policies != null ? Model.Policies.Where(p => p.Status == "Görüşme bekleniyor" || p.Status == "İptal Edildi" || p.Status == "Reddedildi").OrderByDescending(p => p.StartDate).ToList() : new List<Safeish.Models.UserPolicy>();
                             }
                             @if (pendingPolicies.Any())
                             {
@@ -279,7 +279,7 @@
                                                 <div class="card-body p-4">
                                                     <div class="d-flex justify-content-between align-items-center mb-3">
                                                         <h5 class="fw-bold mb-0 text-dark">@policy.PackageName</h5>
-                                                        <span class="badge" style="background-color: @(policy.Status == "Görüşme bekleniyor" ? "#ffc107" : "#6c757d"); color: @(policy.Status == "Görüşme bekleniyor" ? "#000" : "#fff");">@policy.Status</span>
+                                                        <span class="badge" style="background-color: @(policy.Status == "Görüşme bekleniyor" ? "#ffc107" : (policy.Status == "Reddedildi" || policy.Status == "İptal Edildi" ? "#dc3545" : "#6c757d")); color: @(policy.Status == "Görüşme bekleniyor" ? "#000" : "#fff");">@policy.Status</span>
                                                     </div>
                                                     <p class="text-muted small mb-2"><i class="bi bi-calendar-event me-2"></i><strong>Başvuru:</strong> @policy.StartDate.ToShortDateString()</p>
                                                     <div class="d-flex justify-content-between align-items-center mt-3">

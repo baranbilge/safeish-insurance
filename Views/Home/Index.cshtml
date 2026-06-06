@@ -1,8 +1,7 @@
 @model IEnumerable<Safeish.Models.InsurancePackage>
 @{
     ViewData["Title"] = "Ana Sayfa";
-    var groupedPackages = Model != null ? Model.Where(p => p.InsuranceTypeId == 1 || p.InsuranceTypeId == 2 || p.InsuranceTypeId == 3)
-                               .GroupBy(p => p.InsuranceType)
+    var groupedPackages = Model != null ? Model.GroupBy(p => p.InsuranceType)
                                .OrderBy(g => g.Key.Id)
                                .ToList() : new List<IGrouping<Safeish.Models.InsuranceType, Safeish.Models.InsurancePackage>>();
 }
@@ -82,7 +81,6 @@
 <!-- Vertical Dot Navigation -->
 <nav id="dot-nav">
     <ul>
-        <li><a href="#hero" class="active"><span class="dot"></span><span class="nav-label">Ana Sayfa</span></a></li>
         <li><a href="#kampanyalar"><span class="dot"></span><span class="nav-label">Kampanyalar</span></a></li>
         <li><a href="#sigortalar"><span class="dot"></span><span class="nav-label">Sigortalar</span></a></li>
         <li><a href="#anlasmali-kurumlar"><span class="dot"></span><span class="nav-label">Anlaşmalı Kurumlar</span></a></li>
@@ -179,338 +177,70 @@
 
         <!-- Tabs -->
         <ul class="nav nav-pills justify-content-center mb-5 border-bottom pb-2" id="insuranceTabs" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-dark fw-bold active border-0 bg-transparent px-4" id="arac-tab" data-bs-toggle="pill" data-bs-target="#arac" type="button" role="tab" aria-controls="arac" aria-selected="true">Araç Sigortası</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-dark fw-bold border-0 bg-transparent px-4" id="saglik-tab" data-bs-toggle="pill" data-bs-target="#saglik" type="button" role="tab" aria-controls="saglik" aria-selected="false">Sağlık Sigortası</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-dark fw-bold border-0 bg-transparent px-4" id="evcil-tab" data-bs-toggle="pill" data-bs-target="#evcil" type="button" role="tab" aria-controls="evcil" aria-selected="false">Evcil Hayvan</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-dark fw-bold border-0 bg-transparent px-4" id="seyahat-tab" data-bs-toggle="pill" data-bs-target="#seyahat" type="button" role="tab" aria-controls="seyahat" aria-selected="false">Seyahat</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link text-dark fw-bold border-0 bg-transparent px-4" id="konut-tab" data-bs-toggle="pill" data-bs-target="#konut" type="button" role="tab" aria-controls="konut" aria-selected="false">Konut</button>
-            </li>
+            @{
+                bool isFirstTab = true;
+                foreach(var group in groupedPackages) {
+                    var targetId = "cat-" + group.Key.Id;
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-dark fw-bold @(isFirstTab ? "active" : "") border-0 bg-transparent px-4" 
+                                id="@targetId-tab" data-bs-toggle="pill" data-bs-target="#@targetId" 
+                                type="button" role="tab" aria-controls="@targetId" 
+                                aria-selected="@(isFirstTab ? "true" : "false")">@group.Key.Name.Replace(" Sigortası","")</button>
+                    </li>
+                    isFirstTab = false;
+                }
+            }
         </ul>
 
         <div class="tab-content" id="insuranceTabsContent">
-            <!-- Araç Sigortası Content -->
-            <div class="tab-pane fade show active" id="arac" role="tabpanel" aria-labelledby="arac-tab">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Trafik</h4>
-                                    <p class="text-muted small mb-0">Zorunlu temel koruma.</p>
-                                </div>
-                                <i class="bi bi-car-front text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 150.000 TL'den başlayan teminat</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Karşı Taraf Hasarları</li>
-                                <li class="mb-3 text-muted"><i class="bi bi-x me-2 fs-5"></i> Kendi Aracınızın Hasarı</li>
-                            </ul>
-                            <button class="btn btn-outline-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Trafik">Teklif Alın</button>
+            @{
+                bool isFirstContent = true;
+                foreach(var group in groupedPackages) {
+                    var targetId = "cat-" + group.Key.Id;
+                    <div class="tab-pane fade @(isFirstContent ? "show active" : "")" id="@targetId" role="tabpanel" aria-labelledby="@targetId-tab">
+                        <div class="row g-4 justify-content-center">
+                            @{
+                                var packages = group.ToList();
+                                for(int i = 0; i < packages.Count; i++) {
+                                    var pack = packages[i];
+                                    var isPopular = (i == 1); // 2nd package is "Orta" tier (En Popüler)
+                                    var isHighTier = (i == 2); // 3rd package
+                                    
+                                    var cardClass = isPopular ? "border-0 shadow rounded-4 pricing-card popular bg-white p-4" 
+                                                    : (isHighTier ? "border-0 shadow-sm rounded-4 pricing-card high-tier p-4" : "border-0 shadow-sm rounded-4 pricing-card bg-white p-4");
+                                    var iconClass = isPopular ? $"{group.Key.IconUrl} text-primary fs-4" : $"{group.Key.IconUrl} text-muted fs-4";
+                                    var btnClass = isPopular ? "btn-primary text-white" : (isHighTier ? "btn-outline-secondary text-dark border-secondary bg-white" : "btn-outline-primary");
+                                    
+                                    <div class="col-lg-4 col-md-6 @(isPopular ? "position-relative" : "")">
+                                        @if(isPopular) {
+                                            <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-1 px-3" style="z-index: 10; font-size: 0.8rem; letter-spacing: 1px;">EN POPÜLER</span>
+                                        }
+                                        <div class="card h-100 @cardClass">
+                                            <div class="d-flex justify-content-between align-items-start mb-3 @(isPopular ? "mt-2" : "")">
+                                                <div>
+                                                    <h4 class="fw-bold mb-1">@pack.Name</h4>
+                                                    <p class="text-muted small mb-0">Teminat: @pack.CoverageAmount.ToString("N0") TL</p>
+                                                </div>
+                                                <i class="bi @iconClass"></i>
+                                            </div>
+                                            <hr class="my-4 @(isHighTier ? "border-secondary opacity-10" : "opacity-10")">
+                                            <ul class="list-unstyled flex-grow-1 mb-4">
+                                                @foreach(var f in (pack.Features ?? "").Split(new[] { ',', '\n' }, StringSplitOptions.RemoveEmptyEntries)) {
+                                                    <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> @f.Trim()</li>
+                                                }
+                                            </ul>
+                                            <div class="mt-auto">
+                                                <button class="btn @btnClass rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="@pack.Name">Teklif Alın</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
                         </div>
                     </div>
-                    
-                    <div class="col-lg-4 col-md-6 position-relative">
-                        <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-1 px-3" style="z-index: 10; font-size: 0.8rem; letter-spacing: 1px;">EN POPÜLER</span>
-                        <div class="card h-100 border-0 shadow rounded-4 pricing-card popular bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3 mt-2">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Genişletilmiş Kasko</h4>
-                                    <p class="text-muted small mb-0">Çarpışma ve afet koruması.</p>
-                                </div>
-                                <i class="bi bi-car-front-fill text-primary fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 1.500.000 TL teminat</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Çarpışma ve Çalınma</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Doğal Afet Koruması</li>
-                            </ul>
-                            <button class="btn btn-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Genişletilmiş Kasko">Teklif Alın</button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card high-tier p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Premium Kasko</h4>
-                                    <p class="text-muted small mb-0">Sınırsız ve tam güvence.</p>
-                                </div>
-                                <i class="bi bi-shield-fill-check text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 border-secondary opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Limitsiz Teminat</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Orijinal Parça Garantisi</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Sınırsız İkame Araç</li>
-                            </ul>
-                            <button class="btn btn-outline-secondary text-dark border-secondary rounded-pill fw-bold w-100 py-2 bg-white quote-btn" data-package-name="Premium Kasko">Teklif Alın</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sağlık Sigortası Content -->
-            <div class="tab-pane fade" id="saglik" role="tabpanel" aria-labelledby="saglik-tab">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Tamamlayıcı</h4>
-                                    <p class="text-muted small mb-0">SGK anlaşmalı hastaneler.</p>
-                                </div>
-                                <i class="bi bi-heart text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Limitsiz Yatarak Tedavi</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Yılda 10 Ayakta Tedavi</li>
-                                <li class="mb-3 text-muted"><i class="bi bi-x me-2 fs-5"></i> Anlaşmasız Hastane</li>
-                            </ul>
-                            <button class="btn btn-outline-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Tamamlayıcı Sağlık">Teklif Alın</button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 position-relative">
-                        <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-1 px-3" style="z-index: 10; font-size: 0.8rem; letter-spacing: 1px;">EN POPÜLER</span>
-                        <div class="card h-100 border-0 shadow rounded-4 pricing-card popular bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3 mt-2">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Kapsamlı Sağlık</h4>
-                                    <p class="text-muted small mb-0">Tüm özel hastanelerde geçerli.</p>
-                                </div>
-                                <i class="bi bi-heart-pulse-fill text-primary fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> %100 Yatarak Tedavi</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Sınırsız Ayakta Tedavi</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> A Tipi Özel Hastaneler</li>
-                            </ul>
-                            <button class="btn btn-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Kapsamlı Sağlık">Teklif Alın</button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card high-tier p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">VIP Hayat</h4>
-                                    <p class="text-muted small mb-0">Global sağlık güvencesi.</p>
-                                </div>
-                                <i class="bi bi-hospital text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 border-secondary opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Yurtdışı Tedavi Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Ücretsiz Kapsamlı Check-up</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Özel VIP Hasta Odası</li>
-                            </ul>
-                            <button class="btn btn-outline-secondary text-dark border-secondary rounded-pill fw-bold w-100 py-2 bg-white quote-btn" data-package-name="VIP Hayat">Teklif Alın</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Evcil Hayvan Content -->
-            <div class="tab-pane fade" id="evcil" role="tabpanel" aria-labelledby="evcil-tab">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Pati Koruma</h4>
-                                    <p class="text-muted small mb-0">Rutin bakımlar için.</p>
-                                </div>
-                                <i class="bi bi-github text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 20.000 TL Tedavi Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Yılda 4 Ücretsiz Muayene</li>
-                                <li class="mb-3 text-muted"><i class="bi bi-x me-2 fs-5"></i> Ameliyat Masrafları</li>
-                            </ul>
-                            <button class="btn btn-outline-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Pati Koruma">Teklif Alın</button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 position-relative">
-                        <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-1 px-3" style="z-index: 10; font-size: 0.8rem; letter-spacing: 1px;">EN POPÜLER</span>
-                        <div class="card h-100 border-0 shadow rounded-4 pricing-card popular bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3 mt-2">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Can Dostum</h4>
-                                    <p class="text-muted small mb-0">Acil durumlar ve ameliyat.</p>
-                                </div>
-                                <i class="bi bi-heart-fill text-primary fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 100.000 TL Teminat</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Acil Cerrahi Müdahale</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Yatarak Tedavi Kapsamı</li>
-                            </ul>
-                            <button class="btn btn-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Can Dostum">Teklif Alın</button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card high-tier p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Premium Pati</h4>
-                                    <p class="text-muted small mb-0">Eksiksiz veteriner hizmeti.</p>
-                                </div>
-                                <i class="bi bi-star-fill text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 border-secondary opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Limitsiz Sağlık Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Yurtdışı Seyahat Koruması</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Mikroçip ve VIP Bakım</li>
-                            </ul>
-                            <button class="btn btn-outline-secondary text-dark border-secondary rounded-pill fw-bold w-100 py-2 bg-white quote-btn" data-package-name="Premium Pati">Teklif Alın</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Seyahat Content -->
-            <div class="tab-pane fade" id="seyahat" role="tabpanel" aria-labelledby="seyahat-tab">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Yurt İçi</h4>
-                                    <p class="text-muted small mb-0">Kısa mesafe güvencesi.</p>
-                                </div>
-                                <i class="bi bi-bus-front text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 50.000 TL Kaza Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Bagaj Kaybı (2.000 TL)</li>
-                                <li class="mb-3 text-muted"><i class="bi bi-x me-2 fs-5"></i> Yurtdışı Hastane</li>
-                            </ul>
-                            <button class="btn btn-outline-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Yurt İçi Seyahat">Teklif Alın</button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 position-relative">
-                        <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-1 px-3" style="z-index: 10; font-size: 0.8rem; letter-spacing: 1px;">EN POPÜLER</span>
-                        <div class="card h-100 border-0 shadow rounded-4 pricing-card popular bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3 mt-2">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Avrupa Vize</h4>
-                                    <p class="text-muted small mb-0">Schengen uyumlu poliçe.</p>
-                                </div>
-                                <i class="bi bi-airplane-fill text-primary fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 30.000 EUR Teminat</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Schengen Vize Zorunluluğu</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Tıbbi Nakil Hizmeti</li>
-                            </ul>
-                            <button class="btn btn-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Avrupa Vize Seyahat">Teklif Alın</button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card high-tier p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Global Gezgin</h4>
-                                    <p class="text-muted small mb-0">Dünya geneli limitsiz seyahat.</p>
-                                </div>
-                                <i class="bi bi-globe text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 border-secondary opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 100.000 EUR Sağlık Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Uçuş Gecikmesi & İptali</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Global Acil Tahliye</li>
-                            </ul>
-                            <button class="btn btn-outline-secondary text-dark border-secondary rounded-pill fw-bold w-100 py-2 bg-white quote-btn" data-package-name="Global Gezgin">Teklif Alın</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Konut Content -->
-            <div class="tab-pane fade" id="konut" role="tabpanel" aria-labelledby="konut-tab">
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Temel Güvence</h4>
-                                    <p class="text-muted small mb-0">Kiracılar için ideal koruma.</p>
-                                </div>
-                                <i class="bi bi-house text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Eşya Hırsızlık Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Su Baskını (250.000 TL)</li>
-                                <li class="mb-3 text-muted"><i class="bi bi-x me-2 fs-5"></i> Bina İçi Tesisat Koruması</li>
-                            </ul>
-                            <button class="btn btn-outline-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Temel Konut Güvence">Teklif Alın</button>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4 col-md-6 position-relative">
-                        <span class="badge bg-primary text-white position-absolute top-0 start-50 translate-middle py-1 px-3" style="z-index: 10; font-size: 0.8rem; letter-spacing: 1px;">EN POPÜLER</span>
-                        <div class="card h-100 border-0 shadow rounded-4 pricing-card popular bg-white p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3 mt-2">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Evim Güvende</h4>
-                                    <p class="text-muted small mb-0">Ev sahipleri için geniş kapsam.</p>
-                                </div>
-                                <i class="bi bi-house-door-fill text-primary fs-4"></i>
-                            </div>
-                            <hr class="my-4 opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Deprem ve Yangın (1 Milyon TL)</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Değerli Eşya Koruması</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Komşuya Verilen Hasarlar</li>
-                            </ul>
-                            <button class="btn btn-primary rounded-pill fw-bold w-100 py-2 quote-btn" data-package-name="Evim Güvende">Teklif Alın</button>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm rounded-4 pricing-card high-tier p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <h4 class="fw-bold mb-1">Premium Konak</h4>
-                                    <p class="text-muted small mb-0">Eksiksiz rezidans/villa koruması.</p>
-                                </div>
-                                <i class="bi bi-building-fill-check text-muted fs-4"></i>
-                            </div>
-                            <hr class="my-4 border-secondary opacity-10">
-                            <ul class="list-unstyled flex-grow-1 mb-4">
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Limitsiz Bina Teminatı</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> Elektronik Cihaz ve Sanat Eseri</li>
-                                <li class="mb-3"><i class="bi bi-check text-primary me-2 fs-5"></i> 7/24 Acil Konut Asistanı</li>
-                            </ul>
-                            <button class="btn btn-outline-secondary text-dark border-secondary rounded-pill fw-bold w-100 py-2 bg-white quote-btn" data-package-name="Premium Konak">Teklif Alın</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    isFirstContent = false;
+                }
+            }
         </div>
     </div>
 </section>
@@ -572,7 +302,7 @@
                         <span class="text-dark fw-medium">Yatırım Fonu Danışmanlığı</span>
                     </li>
                 </ul>
-                <a href="#iletisim" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Danışmanla Görüş</a>
+                <a href="javascript:void(0);" onclick="toggleChatbotPopup()" class="btn btn-outline-primary rounded-pill px-4 py-2 fw-bold">Danışmanla Görüş</a>
             </div>
         </div>
     </div>

@@ -30,6 +30,8 @@ namespace Safeish.Models
         public string? ResetPasswordToken { get; set; }
         public DateTime? ResetPasswordTokenExpiry { get; set; }
 
+        public string Role { get; set; } = "User";
+
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         public virtual ICollection<UserPolicy> Policies { get; set; }

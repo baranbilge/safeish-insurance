@@ -1,0 +1,56 @@
+@model IEnumerable<Safeish.Models.UserPolicy>
+
+@{
+    ViewData["Title"] = "Aktif Sigortalar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">Aktif Sigortalar</h2>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">ID</th>
+                        <th>Müşteri</th>
+                        <th>Paket Adı</th>
+                        <th>Durum</th>
+                        <th>Başlangıç Tarihi</th>
+                        <th>Bitiş Tarihi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">@item.Id</td>
+                            <td class="fw-bold">
+                                @item.User?.FirstName @item.User?.LastName
+                                <br/>
+                                <small class="text-muted fw-normal">@item.User?.Email</small>
+                            </td>
+                            <td>
+                                @item.PackageName
+                            </td>
+                            <td>
+                                <span class="badge bg-success">@item.Status</span>
+                            </td>
+                            <td>@item.StartDate.ToString("dd.MM.yyyy")</td>
+                            <td>@item.EndDate.ToString("dd.MM.yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            @if(!Model.Any()) {
+                <div class="text-center p-4 text-muted">
+                    <i class="bi bi-shield-x fs-1"></i>
+                    <p class="mt-2">Henüz aktif sigorta bulunmuyor.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

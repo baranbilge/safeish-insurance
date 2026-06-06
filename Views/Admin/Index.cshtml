@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="fw-bold">Hoş Geldiniz, Admin</h2>
+        <p class="text-muted">Safeish sigorta sisteminin genel durumunu buradan takip edebilirsiniz.</p>
+    </div>
+</div>
+
+<div class="row">
+    <!-- Toplam Kullanıcı -->
+    <div class="col-md-3 mb-4">
+        <div class="card bg-primary text-white h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-uppercase fw-bold text-white-50">Toplam Kullanıcı</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.TotalUsers</h2>
+                    </div>
+                    <div class="fs-1 text-white-50">
+                        <i class="bi bi-people"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="~/Admin/Users" class="text-white text-decoration-none">
+                    <small>Kullanıcıları Görüntüle <i class="bi bi-arrow-right"></i></small>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sigorta Paketleri -->
+    <div class="col-md-3 mb-4">
+        <div class="card bg-success text-white h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-uppercase fw-bold text-white-50">Sigorta Paketleri</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.TotalPackages</h2>
+                    </div>
+                    <div class="fs-1 text-white-50">
+                        <i class="bi bi-box-seam"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="~/Admin/Packages" class="text-white text-decoration-none">
+                    <small>Paketleri Yönet <i class="bi bi-arrow-right"></i></small>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bekleyen Poliçeler -->
+    <div class="col-md-3 mb-4">
+        <div class="card bg-warning text-dark h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-uppercase fw-bold text-black-50">Bekleyen Poliçeler</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.PendingPolicies</h2>
+                    </div>
+                    <div class="fs-1 text-black-50">
+                        <i class="bi bi-hourglass-split"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="~/Admin/Policies" class="text-dark text-decoration-none">
+                    <small>Talepleri İncele <i class="bi bi-arrow-right"></i></small>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aktif Sigortalar -->
+    <div class="col-md-3 mb-4">
+        <div class="card bg-info text-white h-100 shadow-sm border-0">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <h6 class="text-uppercase fw-bold text-white-50">Aktif Sigortalar</h6>
+                        <h2 class="mb-0 fw-bold">@ViewBag.ActivePoliciesCount</h2>
+                    </div>
+                    <div class="fs-1 text-white-50">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a href="~/Admin/ActivePolicies" class="text-white text-decoration-none">
+                    <small>Detayları Gör <i class="bi bi-arrow-right"></i></small>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-12">
+        <div class="card mb-4">
+            <div class="card-header bg-white py-3">
+                <h5 class="mb-0 fw-bold"><i class="bi bi-info-circle text-primary-red me-2"></i> Sistem Bilgisi</h5>
+            </div>
+            <div class="card-body">
+                <p>Bu panel üzerinden <strong>Safeish</strong> uygulamasındaki sigorta paketlerini yönetebilir ve kullanıcı istatistiklerini görebilirsiniz.</p>
+                <ul>
+                    <li><strong>Sigorta Paketleri</strong> menüsünden yeni paketler ekleyebilir, fiyatları ve kapsamları güncelleyebilirsiniz.</li>
+                    <li>Sisteme kayıt olan kullanıcılar teklif aldığında, bekleyen poliçeler sayacı artacaktır.</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+</div>

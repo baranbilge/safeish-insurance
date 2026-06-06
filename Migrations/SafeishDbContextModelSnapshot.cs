@@ -2,7 +2,6 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Safeish.Data;
 
@@ -16,33 +15,27 @@ namespace Safeish.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.7")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128);
-
-            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.7");
 
             modelBuilder.Entity("Safeish.Models.InsurancePackage", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<decimal>("CoverageAmount")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Features")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("InsuranceTypeId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -58,82 +51,136 @@ namespace Safeish.Migrations
                         {
                             Id = 1,
                             CoverageAmount = 50000m,
-                            Features = "Yatarak Tedavi Kapsamı (Sınırlı), Acil Durum Ambulans Hizmeti",
+                            Features = "Ayakta Tedavi (Yılda 6 Kez), Yatarak Tedavi Kapsamı, Anlaşmalı Kurum Ağı",
                             InsuranceTypeId = 1,
-                            Name = "Temel Sağlık",
+                            Name = "Tamamlayıcı",
                             Price = 3000m
                         },
                         new
                         {
                             Id = 2,
-                            CoverageAmount = 150000m,
-                            Features = "Temel Kapsamlar, Yılda 10 Kez Ayakta Tedavi, %80 İlaç Katılım Payı",
+                            CoverageAmount = 250000m,
+                            Features = "Limitsiz Ayakta Tedavi, %100 Yatarak Tedavi, Diş ve Göz Muayenesi, Geniş Anlaşmalı Kurum",
                             InsuranceTypeId = 1,
-                            Name = "Standart Sağlık",
-                            Price = 6000m
+                            Name = "Kapsamlı Sağlık",
+                            Price = 7500m
                         },
                         new
                         {
                             Id = 3,
-                            CoverageAmount = 500000m,
-                            Features = "Sınırsız Ayakta ve Yatarak Tedavi, Diş ve Göz Muayenesi, Yurtdışı Teminatı, Özel Oda Giderleri, Check-up",
+                            CoverageAmount = 1000000m,
+                            Features = "Limitsiz Tüm Tedaviler, Yurtdışı Teminatı, Özel Oda ve Refakatçi, VIP Check-up, Acil Hava Ambulansı",
                             InsuranceTypeId = 1,
-                            Name = "Premium Sağlık",
-                            Price = 12000m
+                            Name = "VIP Hayat",
+                            Price = 15000m
                         },
                         new
                         {
                             Id = 4,
-                            CoverageAmount = 250000m,
-                            Features = "Çarpışma, Çalınma, Araç Yanması, Yılda 1 Kez Çekici Hizmeti",
+                            CoverageAmount = 120000m,
+                            Features = "Zorunlu Karşı Taraf Hasarı, Üçüncü Şahıs Koruma, Hukuki Savunma",
                             InsuranceTypeId = 2,
-                            Name = "Temel Kasko",
-                            Price = 4000m
+                            Name = "Trafik",
+                            Price = 3500m
                         },
                         new
                         {
                             Id = 5,
                             CoverageAmount = 500000m,
-                            Features = "Temel Kapsamlar, Cam Kırılması, Mini Onarım, 7 Gün İkame Araç",
+                            Features = "Çarpışma ve Çalınma, Doğal Afet Koruma, Cam Kırılması, Yılda 2 Kez Çekici",
                             InsuranceTypeId = 2,
-                            Name = "Standart Kasko",
-                            Price = 7500m
+                            Name = "Genişletilmiş Kasko",
+                            Price = 8000m
                         },
                         new
                         {
                             Id = 6,
-                            CoverageAmount = 1000000m,
-                            Features = "Tüm Kapsamlar, Sınırsız İkame Araç, Hatalı Akaryakıt Dolumu, Orjinal Yedek Parça, Doğal Afetler",
+                            CoverageAmount = 2000000m,
+                            Features = "Limitsiz İhtiyari Mali Mesuliyet, Orijinal Yedek Parça, Sınırsız İkame Araç, Hatalı Akaryakıt, Tam Koruma",
                             InsuranceTypeId = 2,
                             Name = "Premium Kasko",
-                            Price = 11000m
+                            Price = 14000m
                         },
                         new
                         {
                             Id = 7,
-                            CoverageAmount = 500000m,
-                            Features = "Yangın, Deprem (DASK Kapsamı Dışı), Yer Kayması",
+                            CoverageAmount = 250000m,
+                            Features = "Yangın Koruma, Deprem (DASK Harici), Yer Kayması",
                             InsuranceTypeId = 3,
-                            Name = "Temel Konut",
-                            Price = 2500m
+                            Name = "Temel Güvence",
+                            Price = 1500m
                         },
                         new
                         {
                             Id = 8,
-                            CoverageAmount = 1500000m,
-                            Features = "Temel Kapsamlar, Hırsızlık, Su Baskını, Cam Kırılması",
+                            CoverageAmount = 750000m,
+                            Features = "Tüm Temel Kapsamlar, Hırsızlık, Su Baskını, Cam Kırılması, İzolasyon Hasarları",
                             InsuranceTypeId = 3,
-                            Name = "Standart Konut",
-                            Price = 4500m
+                            Name = "Evim Güvende",
+                            Price = 3500m
                         },
                         new
                         {
                             Id = 9,
-                            CoverageAmount = 3000000m,
-                            Features = "Tüm Kapsamlar, Eşya Güvencesi, İzolasyon Hasarları, Ücretsiz Çilingir ve Tesisatçı",
+                            CoverageAmount = 2000000m,
+                            Features = "Limitsiz Eşya Güvencesi, Elektronik Cihaz Koruma, Ücretsiz Çilingir ve Tesisat, Alternatif İkametgah",
                             InsuranceTypeId = 3,
-                            Name = "Premium Konut",
-                            Price = 8000m
+                            Name = "Premium Konak",
+                            Price = 7000m
+                        },
+                        new
+                        {
+                            Id = 10,
+                            CoverageAmount = 20000m,
+                            Features = "Acil Durum Müdahalesi, Kaza Sonrası Tedavi, Muayene (Yılda 2)",
+                            InsuranceTypeId = 4,
+                            Name = "Pati Koruma",
+                            Price = 1200m
+                        },
+                        new
+                        {
+                            Id = 11,
+                            CoverageAmount = 50000m,
+                            Features = "Hastalık Tedavisi, Ameliyat Masrafları, Laboratuvar Tahlilleri, Mikroçip Takılması",
+                            InsuranceTypeId = 4,
+                            Name = "Can Dostum",
+                            Price = 3000m
+                        },
+                        new
+                        {
+                            Id = 12,
+                            CoverageAmount = 150000m,
+                            Features = "Sınırsız Tedavi, Check-up, Diş Temizliği, Yurtdışı Seyahat Kapsamı, Kayıp İlan Desteği",
+                            InsuranceTypeId = 4,
+                            Name = "Premium Pati",
+                            Price = 6000m
+                        },
+                        new
+                        {
+                            Id = 13,
+                            CoverageAmount = 10000m,
+                            Features = "Yurtiçi Tıbbi Tedavi, Bagaj Kaybı, Seyahat İptali",
+                            InsuranceTypeId = 5,
+                            Name = "Yurt İçi",
+                            Price = 300m
+                        },
+                        new
+                        {
+                            Id = 14,
+                            CoverageAmount = 30000m,
+                            Features = "Schengen Vize Şartlarına Uygun, Tıbbi Nakil, Acil İlaç Gönderimi, Pasaport Kaybı",
+                            InsuranceTypeId = 5,
+                            Name = "Avrupa Vize",
+                            Price = 900m
+                        },
+                        new
+                        {
+                            Id = 15,
+                            CoverageAmount = 100000m,
+                            Features = "Tüm Dünya Geçerli, Covid-19 Kapsamı, Hukuki Yardım, Acil Geri Dönüş, Kayak/Spor Yaralanmaları",
+                            InsuranceTypeId = 5,
+                            Name = "Global Gezgin",
+                            Price = 1800m
                         });
                 });
 
@@ -141,21 +188,19 @@ namespace Safeish.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("IconUrl")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -182,6 +227,20 @@ namespace Safeish.Migrations
                             Description = "Eviniz için tam koruma",
                             IconUrl = "bi-house",
                             Name = "Konut Sigortası"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Minik dostlarınız için",
+                            IconUrl = "bi-github",
+                            Name = "Evcil Hayvan Sigortası"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Güvenli yolculuklar",
+                            IconUrl = "bi-airplane-fill",
+                            Name = "Seyahat Sigortası"
                         });
                 });
 
@@ -189,79 +248,279 @@ namespace Safeish.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Address")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("AlternativePhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("LastName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PasswordHash")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("ResetPasswordToken")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("ResetPasswordTokenExpiry")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1001,
+                            CreatedAt = new DateTime(2024, 8, 25, 11, 55, 0, 0, DateTimeKind.Utc),
+                            Email = "mert.çelik1@gmail.com",
+                            FirstName = "Mert",
+                            LastName = "Çelik",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05056495562",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1002,
+                            CreatedAt = new DateTime(2024, 5, 1, 9, 22, 0, 0, DateTimeKind.Utc),
+                            Email = "gizem.şimşek2@hotmail.com",
+                            FirstName = "Gizem",
+                            LastName = "Şimşek",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05439704917",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1003,
+                            CreatedAt = new DateTime(2024, 7, 3, 16, 31, 0, 0, DateTimeKind.Utc),
+                            Email = "burak.özdemir3@gmail.com",
+                            FirstName = "Burak",
+                            LastName = "Özdemir",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05447639866",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1004,
+                            CreatedAt = new DateTime(2024, 1, 22, 10, 50, 0, 0, DateTimeKind.Utc),
+                            Email = "seda.aydın4@gmail.com",
+                            FirstName = "Seda",
+                            LastName = "Aydın",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05336283477",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1005,
+                            CreatedAt = new DateTime(2024, 1, 24, 17, 52, 0, 0, DateTimeKind.Utc),
+                            Email = "ahmet.çelik5@hotmail.com",
+                            FirstName = "Ahmet",
+                            LastName = "Çelik",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05054306517",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1006,
+                            CreatedAt = new DateTime(2024, 9, 20, 13, 18, 0, 0, DateTimeKind.Utc),
+                            Email = "elif.kurt6@gmail.com",
+                            FirstName = "Elif",
+                            LastName = "Kurt",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05446840182",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1007,
+                            CreatedAt = new DateTime(2024, 7, 13, 16, 28, 0, 0, DateTimeKind.Utc),
+                            Email = "mehmet.kılıç7@hotmail.com",
+                            FirstName = "Mehmet",
+                            LastName = "Kılıç",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05321302610",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1008,
+                            CreatedAt = new DateTime(2024, 6, 27, 11, 44, 0, 0, DateTimeKind.Utc),
+                            Email = "ayşe.kılıç8@gmail.com",
+                            FirstName = "Ayşe",
+                            LastName = "Kılıç",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05322362902",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1009,
+                            CreatedAt = new DateTime(2024, 7, 26, 8, 26, 0, 0, DateTimeKind.Utc),
+                            Email = "ege.öztürk9@hotmail.com",
+                            FirstName = "Ege",
+                            LastName = "Öztürk",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05336117725",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1010,
+                            CreatedAt = new DateTime(2024, 10, 26, 8, 50, 0, 0, DateTimeKind.Utc),
+                            Email = "furkan.aslan10@gmail.com",
+                            FirstName = "Furkan",
+                            LastName = "Aslan",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05446989068",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1011,
+                            CreatedAt = new DateTime(2024, 9, 13, 16, 7, 0, 0, DateTimeKind.Utc),
+                            Email = "elif.koç11@gmail.com",
+                            FirstName = "Elif",
+                            LastName = "Koç",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05434327342",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1012,
+                            CreatedAt = new DateTime(2024, 4, 18, 16, 12, 0, 0, DateTimeKind.Utc),
+                            Email = "seda.yılmaz12@hotmail.com",
+                            FirstName = "Seda",
+                            LastName = "Yılmaz",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05058409011",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1013,
+                            CreatedAt = new DateTime(2024, 11, 26, 8, 21, 0, 0, DateTimeKind.Utc),
+                            Email = "ege.şahin13@hotmail.com",
+                            FirstName = "Ege",
+                            LastName = "Şahin",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05327021453",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1014,
+                            CreatedAt = new DateTime(2024, 5, 25, 9, 14, 0, 0, DateTimeKind.Utc),
+                            Email = "ege.yıldırım14@gmail.com",
+                            FirstName = "Ege",
+                            LastName = "Yıldırım",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05443193600",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1015,
+                            CreatedAt = new DateTime(2024, 10, 24, 9, 15, 0, 0, DateTimeKind.Utc),
+                            Email = "mehmet.yıldırım15@hotmail.com",
+                            FirstName = "Mehmet",
+                            LastName = "Yıldırım",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05426265923",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1016,
+                            CreatedAt = new DateTime(2024, 6, 9, 12, 42, 0, 0, DateTimeKind.Utc),
+                            Email = "hasan.çelik16@hotmail.com",
+                            FirstName = "Hasan",
+                            LastName = "Çelik",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05334785495",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1017,
+                            CreatedAt = new DateTime(2024, 4, 23, 9, 44, 0, 0, DateTimeKind.Utc),
+                            Email = "gökhan.şimşek17@hotmail.com",
+                            FirstName = "Gökhan",
+                            LastName = "Şimşek",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05334500857",
+                            Role = "User"
+                        },
+                        new
+                        {
+                            Id = 1018,
+                            CreatedAt = new DateTime(2024, 6, 23, 10, 46, 0, 0, DateTimeKind.Utc),
+                            Email = "hasan.yıldız18@gmail.com",
+                            FirstName = "Hasan",
+                            LastName = "Yıldız",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPQAAA",
+                            PhoneNumber = "05054759324",
+                            Role = "User"
+                        });
                 });
 
             modelBuilder.Entity("Safeish.Models.UserPolicy", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("EndDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("InsurancePackageId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("PackageName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Status")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("TEXT");
 
                     b.Property<int>("UserId")
-                        .HasColumnType("int");
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
@@ -270,6 +529,250 @@ namespace Safeish.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserPolicies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1001,
+                            EndDate = new DateTime(2028, 5, 14, 17, 28, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 3,
+                            IsActive = true,
+                            PackageName = "VIP Hayat",
+                            StartDate = new DateTime(2024, 8, 28, 11, 55, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1001
+                        },
+                        new
+                        {
+                            Id = 1002,
+                            EndDate = new DateTime(2028, 3, 17, 9, 46, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 13,
+                            IsActive = true,
+                            PackageName = "Yurt İçi",
+                            StartDate = new DateTime(2024, 5, 4, 9, 22, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1002
+                        },
+                        new
+                        {
+                            Id = 1003,
+                            EndDate = new DateTime(2028, 8, 24, 11, 1, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 8,
+                            IsActive = true,
+                            PackageName = "Evim Güvende",
+                            StartDate = new DateTime(2024, 7, 6, 16, 31, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1003
+                        },
+                        new
+                        {
+                            Id = 1004,
+                            EndDate = new DateTime(2028, 1, 2, 12, 43, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 11,
+                            IsActive = true,
+                            PackageName = "Can Dostum",
+                            StartDate = new DateTime(2024, 1, 25, 10, 50, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1004
+                        },
+                        new
+                        {
+                            Id = 1005,
+                            EndDate = new DateTime(2028, 1, 9, 11, 37, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 10,
+                            IsActive = true,
+                            PackageName = "Pati Koruma",
+                            StartDate = new DateTime(2024, 1, 27, 17, 52, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1005
+                        },
+                        new
+                        {
+                            Id = 1006,
+                            EndDate = new DateTime(2028, 2, 26, 14, 12, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 15,
+                            IsActive = true,
+                            PackageName = "Global Gezgin",
+                            StartDate = new DateTime(2024, 9, 21, 13, 18, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1006
+                        },
+                        new
+                        {
+                            Id = 1007,
+                            EndDate = new DateTime(2025, 7, 16, 16, 28, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 10,
+                            IsActive = false,
+                            PackageName = "Pati Koruma",
+                            StartDate = new DateTime(2024, 7, 16, 16, 28, 0, 0, DateTimeKind.Utc),
+                            Status = "Sona erdi",
+                            UserId = 1007
+                        },
+                        new
+                        {
+                            Id = 1008,
+                            EndDate = new DateTime(2025, 6, 30, 11, 44, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 11,
+                            IsActive = false,
+                            PackageName = "Can Dostum",
+                            StartDate = new DateTime(2024, 6, 30, 11, 44, 0, 0, DateTimeKind.Utc),
+                            Status = "Sona erdi",
+                            UserId = 1008
+                        },
+                        new
+                        {
+                            Id = 1009,
+                            EndDate = new DateTime(2028, 10, 24, 16, 0, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 9,
+                            IsActive = true,
+                            PackageName = "Premium Konak",
+                            StartDate = new DateTime(2024, 7, 28, 8, 26, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1009
+                        },
+                        new
+                        {
+                            Id = 1010,
+                            EndDate = new DateTime(2028, 12, 15, 16, 20, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 13,
+                            IsActive = true,
+                            PackageName = "Yurt İçi",
+                            StartDate = new DateTime(2024, 10, 28, 8, 50, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1010
+                        },
+                        new
+                        {
+                            Id = 1011,
+                            EndDate = new DateTime(2028, 1, 3, 10, 28, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 11,
+                            IsActive = true,
+                            PackageName = "Can Dostum",
+                            StartDate = new DateTime(2024, 9, 16, 16, 7, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1011
+                        },
+                        new
+                        {
+                            Id = 1012,
+                            EndDate = new DateTime(2028, 8, 24, 14, 23, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 15,
+                            IsActive = true,
+                            PackageName = "Global Gezgin",
+                            StartDate = new DateTime(2024, 4, 19, 16, 12, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1012
+                        },
+                        new
+                        {
+                            Id = 1013,
+                            EndDate = new DateTime(2028, 2, 27, 14, 20, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 9,
+                            IsActive = true,
+                            PackageName = "Premium Konak",
+                            StartDate = new DateTime(2024, 11, 28, 8, 21, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1013
+                        },
+                        new
+                        {
+                            Id = 1014,
+                            EndDate = new DateTime(2028, 8, 22, 15, 32, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 15,
+                            IsActive = true,
+                            PackageName = "Global Gezgin",
+                            StartDate = new DateTime(2024, 5, 29, 9, 14, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1014
+                        },
+                        new
+                        {
+                            Id = 1015,
+                            EndDate = new DateTime(2028, 9, 9, 14, 49, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 11,
+                            IsActive = true,
+                            PackageName = "Can Dostum",
+                            StartDate = new DateTime(2024, 10, 26, 9, 15, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1015
+                        },
+                        new
+                        {
+                            Id = 1016,
+                            EndDate = new DateTime(2028, 9, 6, 8, 54, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 12,
+                            IsActive = true,
+                            PackageName = "Premium Pati",
+                            StartDate = new DateTime(2024, 6, 10, 12, 42, 0, 0, DateTimeKind.Utc),
+                            Status = "Aktif",
+                            UserId = 1016
+                        },
+                        new
+                        {
+                            Id = 1017,
+                            EndDate = new DateTime(2025, 4, 26, 9, 44, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 13,
+                            IsActive = false,
+                            PackageName = "Yurt İçi",
+                            StartDate = new DateTime(2024, 4, 26, 9, 44, 0, 0, DateTimeKind.Utc),
+                            Status = "Sona erdi",
+                            UserId = 1017
+                        },
+                        new
+                        {
+                            Id = 1018,
+                            EndDate = new DateTime(2025, 6, 25, 10, 46, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 6,
+                            IsActive = false,
+                            PackageName = "Premium Kasko",
+                            StartDate = new DateTime(2024, 6, 25, 10, 46, 0, 0, DateTimeKind.Utc),
+                            Status = "Sona erdi",
+                            UserId = 1018
+                        },
+                        new
+                        {
+                            Id = 2001,
+                            EndDate = new DateTime(2025, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 2,
+                            IsActive = false,
+                            PackageName = "Kapsamlı Sağlık",
+                            StartDate = new DateTime(2024, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "Görüşme bekleniyor",
+                            UserId = 1001
+                        },
+                        new
+                        {
+                            Id = 2002,
+                            EndDate = new DateTime(2025, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 7,
+                            IsActive = false,
+                            PackageName = "Temel Güvence",
+                            StartDate = new DateTime(2024, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "Görüşme bekleniyor",
+                            UserId = 1002
+                        },
+                        new
+                        {
+                            Id = 2003,
+                            EndDate = new DateTime(2025, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 3,
+                            IsActive = false,
+                            PackageName = "VIP Hayat",
+                            StartDate = new DateTime(2024, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "Görüşme bekleniyor",
+                            UserId = 1003
+                        },
+                        new
+                        {
+                            Id = 2004,
+                            EndDate = new DateTime(2025, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            InsurancePackageId = 6,
+                            IsActive = false,
+                            PackageName = "Premium Kasko",
+                            StartDate = new DateTime(2024, 6, 3, 12, 0, 0, 0, DateTimeKind.Utc),
+                            Status = "Görüşme bekleniyor",
+                            UserId = 1004
+                        });
                 });
 
             modelBuilder.Entity("Safeish.Models.InsurancePackage", b =>

@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Safeish.Data;
 using Safeish.Models;
@@ -22,6 +23,12 @@ public class HomeController : Controller
     }
 
     public IActionResult Privacy()
+    {
+        return View();
+    }
+
+    [Authorize]
+    public IActionResult ChatBot()
     {
         return View();
     }
@@ -95,39 +102,57 @@ public class HomeController : Controller
         return View();
     }
 
-    /*
-    // -------------------------------------------------------------------------
-    // YAPAY ZEKA (AI) FİNANSAL DANIŞMANLIK ENTEGRASYONU İÇİN ÖRNEK METOT
-    // -------------------------------------------------------------------------
-    // Bu metot, appsettings.json içerisine eklediğiniz "OpenAI:ApiKey" değerini 
-    // kullanarak OpenAI API (veya benzeri) ile iletişim kurmanız için taslak 
-    // olarak hazırlanmıştır. Gerekli kütüphaneleri (örn: OpenAI-DotNet veya HttpClient) 
-    // projenize dahil ettikten sonra bu metodu aktif hale getirebilirsiniz.
-    
     [HttpPost]
-    public async Task<IActionResult> AskFinancialAdvisor([FromBody] string userMessage)
+    public async Task<IActionResult> AskChatbot([FromBody] ChatRequest request)
     {
-        // 1. API Key'i Configuration üzerinden oku
-        // (Bunun için HomeController constructor'ına IConfiguration inject etmeniz gerekir)
-        // string apiKey = _configuration["OpenAI:ApiKey"];
+        if (string.IsNullOrWhiteSpace(request?.Message)) return BadRequest();
 
-        // 2. HTTP İsteği veya Kütüphane Ayarı
-        // var client = new HttpClient();
-        // client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
-
-        // 3. API'ye gönderilecek JSON Payload'ı hazırla
-        // var requestBody = new {
-        //     model = "gpt-4",
-        //     messages = new[] {
-        //         new { role = "system", content = "Sen profesyonel bir sigorta ve finans danışmanısın." },
-        //         new { role = "user", content = userMessage }
-        //     }
-        // };
-
-        // 4. API'den gelen yanıtı döndür
-        // return Json(new { response = "Yapay Zeka Yanıtı Burada Olacak" });
+        var packages = await _context.InsurancePackages.Include(p => p.InsuranceType).ToListAsync();
         
-        return Ok();
+        var packagesInfo = "Sitemizde sunulan güncel sigorta paketleri ve içerikleri şunlardır:\n";
+        foreach (var pack in packages)
+        {
+            var typeName = pack.InsuranceType?.Name ?? "Bilinmeyen Tür";
+            packagesInfo += $"- Paket: {pack.Name} ({typeName}). Teminat: {pack.CoverageAmount} TL. Özellikler: {pack.Features}\n";
+        }
+        packagesInfo += "\nMüşteriyle konuşurken ihtiyaçlarını analiz et ve yukarıdaki listelenen paketlerden müşteriye en uygun olanını önererek yönlendir.";
+
+        var systemPrompt = "Sen Safeish sigorta platformunun resmi yapay zeka asistanısın. Senin görevin kullanıcılara kasko, trafik sigortası, DASK, sağlık sigortası ve poliçe detayları hakkında profesyonel bilgi vermektir. Sigortacılık, finans veya platformun kullanımı dışındaki hiçbir soruya yanıt vermeyeceksin. Farklı bir konu sorulduğunda nazikçe 'Ben bir sigorta asistanıyım, size sadece sigortacılık konularında yardımcı olabilirim' diyerek reddetmelisin.\n" +
+            "ÖNEMLİ FORMAT KURALLARI: Yanıtlarını verirken mutlaka okunaklı ve özenli bir imla kullan. Uzun metinleri tek bir satıra sıkıştırma, paragraflara böl. Sigorta paketlerini veya özellikleri sayarken mutlaka alt alta maddeler halinde (tire veya madde işareti kullanarak) listele. Yazılar görsel açıdan düzenli, ferah ve profesyonel olmalı.\n\n" + packagesInfo;
+
+        var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY") ?? "YOUR_API_KEY_HERE";
+        using var client = new HttpClient();
+        client.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
+
+        var requestBody = new
+        {
+            model = "gpt-3.5-turbo",
+            messages = new[]
+            {
+                new { role = "system", content = systemPrompt },
+                new { role = "user", content = request.Message }
+            }
+        };
+
+        var content = new StringContent(System.Text.Json.JsonSerializer.Serialize(requestBody), System.Text.Encoding.UTF8, "application/json");
+        var response = await client.PostAsync("https://api.openai.com/v1/chat/completions", content);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var resultString = await response.Content.ReadAsStringAsync();
+            using var document = System.Text.Json.JsonDocument.Parse(resultString);
+            var reply = document.RootElement.GetProperty("choices")[0].GetProperty("message").GetProperty("content").GetString();
+            return Json(new { reply = reply });
+        }
+        else
+        {
+            // If gpt-5 nano doesn't exist, we fallback to something safe or just return error message so UI knows.
+            return Json(new { reply = "Üzgünüm, sistemsel bir hata oluştu veya bu model desteklenmiyor. (OpenAI yanıtı başarısız)" });
+        }
     }
-    */
+}
+
+public class ChatRequest
+{
+    public string Message { get; set; }
 }

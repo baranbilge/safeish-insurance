@@ -1,0 +1,76 @@
+@model Safeish.Models.InsurancePackage
+
+@{
+    ViewData["Title"] = "Yeni Paket Ekle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="row mb-4">
+    <div class="col-12 d-flex align-items-center">
+        <a href="~/Admin/Packages" class="btn btn-outline-secondary me-3">
+            <i class="bi bi-arrow-left"></i> Geri
+        </a>
+        <h2 class="fw-bold mb-0">Yeni Paket Ekle</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-body p-4">
+                <form asp-action="CreatePackage">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                    
+                    <div class="mb-3">
+                        <label asp-for="InsuranceTypeId" class="form-label fw-bold">Sigorta Türü</label>
+                        <select asp-for="InsuranceTypeId" class="form-select" asp-items="ViewBag.InsuranceTypeId">
+                            <option value="">-- Sigorta Türü Seçin --</option>
+                        </select>
+                        <span asp-validation-for="InsuranceTypeId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label fw-bold">Paket Adı</label>
+                        <input asp-for="Name" class="form-control" placeholder="Örn: Premium Kasko" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label asp-for="Price" class="form-label fw-bold">Fiyat (TL)</label>
+                            <div class="input-group">
+                                <input asp-for="Price" type="number" step="0.01" class="form-control" placeholder="0.00" />
+                                <span class="input-group-text">₺</span>
+                            </div>
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                        <div class="col-md-6">
+                            <label asp-for="CoverageAmount" class="form-label fw-bold">Teminat Tutarı (TL)</label>
+                            <div class="input-group">
+                                <input asp-for="CoverageAmount" type="number" step="0.01" class="form-control" placeholder="0.00" />
+                                <span class="input-group-text">₺</span>
+                            </div>
+                            <span asp-validation-for="CoverageAmount" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Features" class="form-label fw-bold">Paket Özellikleri</label>
+                        <textarea asp-for="Features" class="form-control" rows="4" placeholder="Özellikleri virgülle ayırarak yazabilirsiniz..."></textarea>
+                        <span asp-validation-for="Features" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-check-circle me-1"></i> Kaydet
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

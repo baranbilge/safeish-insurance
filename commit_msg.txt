@@ -1,0 +1,5 @@
+feat: admin panel eklendi ve ai entegre edildi.
+
+-Admin panel tasarımı ve çalışma prensibi tamamlandı.
+-Dashboard, Müşteri bilgileri, görüşme talepleri ve sigorta paketi ekleme-düzenleme sekmeleri eklendi.
+-Chatbot eklendi ve site verilerine uygun şekilde modellendi.

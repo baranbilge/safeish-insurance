@@ -1,0 +1,130 @@
+@{
+    ViewData["Title"] = "Safeish Finansal Danışman AI";
+}
+
+<!-- Hero Section for Chat -->
+<section class="bg-primary text-white text-center py-5" style="background: linear-gradient(135deg, var(--primary-red) 0%, var(--primary-red-hover) 100%);">
+    <div class="container mt-5">
+        <h1 class="display-5 fw-bold mb-3">Safeish Finansal Danışman AI</h1>
+        <p class="lead mb-0 text-white-50">Yapay zeka destekli finansal danışmanınız size yardımcı olmaya hazır.</p>
+    </div>
+</section>
+
+<section class="py-5 bg-light" style="min-height: 600px;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card border-0 shadow-lg rounded-4 overflow-hidden">
+                    <!-- Chat Header -->
+                    <div class="card-header bg-white border-bottom p-4 d-flex align-items-center">
+                        <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center me-3 fs-5" style="width: 48px; height: 48px; line-height: 1;">
+                            SI
+                        </div>
+                        <div>
+                            <h5 class="mb-0 fw-bold">Safeish AI</h5>
+                            <small class="text-success"><i class="bi bi-circle-fill" style="font-size: 8px;"></i> Çevrimiçi</small>
+                        </div>
+                    </div>
+
+                    <!-- Chat Body -->
+                    <div class="card-body p-4 bg-light" style="height: 400px; overflow-y: auto;" id="chatBody">
+                        <!-- Welcome Message -->
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center me-3 align-self-start" style="width: 36px; height: 36px; line-height: 1;">
+                                SI
+                            </div>
+                            <div class="bg-white p-3 rounded-3 shadow-sm border" style="max-width: 75%; border-top-left-radius: 0 !important;">
+                                <p class="mb-0">Merhaba! Ben Safeish Finansal Danışman AI. Size sigorta paketlerimiz, yatırım fırsatları veya genel finansal konularda nasıl yardımcı olabilirim?</p>
+                                <small class="text-muted mt-2 d-block" style="font-size: 0.75rem;">Şimdi</small>
+                            </div>
+                        </div>
+
+                        <!-- User Message Placeholder (will be added via JS) -->
+                    </div>
+
+                    <!-- Chat Footer (Input Area) -->
+                    <div class="card-footer bg-white border-top p-3">
+                        <form id="chatForm" onsubmit="return false;">
+                            <div class="input-group">
+                                <input type="text" id="chatInput" class="form-control rounded-pill px-4 py-3" placeholder="Mesajınızı yazın..." style="border-right: none; border-top-right-radius: 0 !important; border-bottom-right-radius: 0 !important;">
+                                <button type="submit" class="btn btn-primary px-4 py-3 rounded-pill" style="border-top-left-radius: 0 !important; border-bottom-left-radius: 0 !important;" id="sendBtn">
+                                    <i class="bi bi-send-fill"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <p class="text-muted small"><i class="bi bi-info-circle me-1"></i> Yapay zeka servisimiz yakında entegre edilecektir.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        document.getElementById('chatForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            if(!message) return;
+
+            // Add user message
+            const chatBody = document.getElementById('chatBody');
+            
+            const userHtml = `
+                <div class="d-flex mb-4 flex-row-reverse">
+                    <div class="bg-secondary text-white rounded-circle p-2 ms-3 align-self-start" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-person"></i>
+                    </div>
+                    <div class="bg-primary text-white p-3 rounded-3 shadow-sm" style="max-width: 75%; border-top-right-radius: 0 !important;">
+                        <p class="mb-0">${message}</p>
+                        <small class="text-white-50 mt-2 d-block text-end" style="font-size: 0.75rem;">Şimdi</small>
+                    </div>
+                </div>
+            `;
+            chatBody.insertAdjacentHTML('beforeend', userHtml);
+            
+            // Scroll to bottom
+            chatBody.scrollTop = chatBody.scrollHeight;
+            input.value = '';
+
+            // Simulate typing and bot response
+            setTimeout(() => {
+                const typingId = 'typing-' + Date.now();
+                const typingHtml = `
+                    <div class="d-flex mb-4" id="${typingId}">
+                        <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center me-3 align-self-start" style="width: 36px; height: 36px; line-height: 1;">
+                            SI
+                        </div>
+                        <div class="bg-white p-3 rounded-3 shadow-sm border text-muted" style="border-top-left-radius: 0 !important;">
+                            <em>Yazıyor...</em>
+                        </div>
+                    </div>
+                `;
+                chatBody.insertAdjacentHTML('beforeend', typingHtml);
+                chatBody.scrollTop = chatBody.scrollHeight;
+
+                setTimeout(() => {
+                    document.getElementById(typingId).remove();
+                    
+                    const botHtml = `
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary text-white rounded d-flex align-items-center justify-content-center me-3 align-self-start" style="width: 36px; height: 36px; line-height: 1;">
+                                SI
+                            </div>
+                            <div class="bg-white p-3 rounded-3 shadow-sm border" style="max-width: 75%; border-top-left-radius: 0 !important;">
+                                <p class="mb-0">Yapay zeka entegrasyonumuz çok yakında aktif olacaktır. Şu an test aşamasındayız.</p>
+                                <small class="text-muted mt-2 d-block" style="font-size: 0.75rem;">Şimdi</small>
+                            </div>
+                        </div>
+                    `;
+                    chatBody.insertAdjacentHTML('beforeend', botHtml);
+                    chatBody.scrollTop = chatBody.scrollHeight;
+                }, 1000);
+            }, 500);
+        });
+    </script>
+}

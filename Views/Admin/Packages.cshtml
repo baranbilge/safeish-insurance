@@ -1,0 +1,176 @@
+@model IEnumerable<Safeish.Models.InsurancePackage>
+@using Safeish.Models
+
+@{
+    ViewData["Title"] = "Sigorta Paketleri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var types = ViewBag.InsuranceTypes as List<InsuranceType>;
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">Sigorta Paketleri</h2>
+    <a href="~/Admin/CreatePackage" class="btn btn-primary">
+        <i class="bi bi-plus-circle me-1"></i> Yeni Paket Ekle
+    </a>
+</div>
+
+<!-- Arama ve Filtreleme Formu -->
+<div class="card mb-4 shadow-sm border-0">
+    <div class="card-body bg-light rounded">
+        <form method="get" action="~/Admin/Packages" class="row g-3">
+            <div class="col-md-5">
+                <label class="form-label fw-bold">Paket Adı Ara</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                    <input type="text" name="search" class="form-control" placeholder="Paket ismi yazın..." value="@ViewBag.CurrentSearch">
+                </div>
+            </div>
+            <div class="col-md-5">
+                <label class="form-label fw-bold">Sigorta Türü Filtrele</label>
+                <select name="typeId" class="form-select">
+                    <option value="">Tümü</option>
+                    @if(types != null) {
+                        foreach(var t in types) {
+                            if (ViewBag.CurrentTypeId != null && (int)ViewBag.CurrentTypeId == t.Id) {
+                                <option value="@t.Id" selected>@t.Name</option>
+                            } else {
+                                <option value="@t.Id">@t.Name</option>
+                            }
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-funnel me-1"></i> Uygula
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-0">
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">ID</th>
+                        <th>Paket Adı</th>
+                        <th>Sigorta Türü</th>
+                        <th>Fiyat</th>
+                        <th>Teminat Tutarı</th>
+                        <th class="text-end pe-4">İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="ps-4">@item.Id</td>
+                            <td class="fw-bold">@item.Name</td>
+                            <td>
+                                <span class="badge bg-secondary text-white">@(item.InsuranceType?.Name ?? "-")</span>
+                            </td>
+                            <td>@item.Price.ToString("C2")</td>
+                            <td>@item.CoverageAmount.ToString("C2")</td>
+                            <td class="text-end pe-4">
+                                <button type="button" class="btn btn-sm btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#editModal-@item.Id" title="Düzenle">
+                                    <i class="bi bi-pencil"></i> Düzenle
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal-@item.Id" title="Sil">
+                                    <i class="bi bi-trash"></i> Sil
+                                </button>
+                            </td>
+                        </tr>
+
+                        <!-- Edit Modal -->
+                        <div class="modal fade text-start" id="editModal-@item.Id" tabindex="-1" aria-labelledby="editModalLabel-@item.Id" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <form action="~/Admin/EditPackage" method="post">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <input type="hidden" name="Id" value="@item.Id" />
+                                        <div class="modal-header bg-light">
+                                            <h5 class="modal-title fw-bold" id="editModalLabel-@item.Id">Paket Düzenle: @item.Name</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Paket Adı</label>
+                                                <input type="text" name="Name" class="form-control" value="@item.Name" required />
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Sigorta Türü</label>
+                                                <select name="InsuranceTypeId" class="form-select" required>
+                                                    @if(types != null) {
+                                                        foreach(var t in types) {
+                                                            if (item.InsuranceTypeId == t.Id) {
+                                                                <option value="@t.Id" selected>@t.Name</option>
+                                                            } else {
+                                                                <option value="@t.Id">@t.Name</option>
+                                                            }
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label fw-bold">Aylık Fiyat (TL)</label>
+                                                    <input type="text" name="Price" class="form-control" value="@item.Price" required />
+                                                </div>
+                                                <div class="col-md-6 mb-3">
+                                                    <label class="form-label fw-bold">Teminat Tutarı (TL)</label>
+                                                    <input type="text" name="CoverageAmount" class="form-control" value="@item.CoverageAmount" required />
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <label class="form-label fw-bold">Özellikler (Virgülle veya alt alta ayırın)</label>
+                                                <textarea name="Features" class="form-control" rows="4">@item.Features</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                            <button type="submit" class="btn btn-primary">Kaydet</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Delete Modal -->
+                        <div class="modal fade text-start" id="deleteModal-@item.Id" tabindex="-1" aria-labelledby="deleteModalLabel-@item.Id" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form action="~/Admin/DeletePackage" method="post">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="id" value="@item.Id" />
+                                        <div class="modal-header bg-danger text-white">
+                                            <h5 class="modal-title fw-bold" id="deleteModalLabel-@item.Id">Paketi Sil</h5>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="mb-0 fs-5"><strong>@item.Name</strong> paketini silmek istediğinize emin misiniz?</p>
+                                            <p class="text-muted small mt-2">Bu işlem geri alınamaz.</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">İptal</button>
+                                            <button type="submit" class="btn btn-danger">Evet, Sil</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </tbody>
+            </table>
+            @if(!Model.Any()) {
+                <div class="text-center p-4 text-muted">
+                    <i class="bi bi-search fs-1"></i>
+                    <p class="mt-2">Arama kriterlerine uygun paket bulunamadı.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>
